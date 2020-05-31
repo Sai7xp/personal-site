@@ -1,0 +1,75 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Tajawal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --bg: white;
+  --textNormal: hsl(0, 0%, 30%);
+  --secondaryText: hsl(0, 0%, 30%);
+  --secondaryLinks: hsl(217, 89%, 52%);
+  --titleText: #838feb;
+  --navShadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
+  --navBorder: none;
+  --navBtmShadow: 0 -2px 8px 0 hsla(0, 0%, 30%, 0.05);
+  --navLink: hsl(243, 15%, 45%);
+
+  --h1: hsl(0, 0%, 15%);
+  --h: hsl(0, 0%, 20%);
+  --theme: #8280ff;
+  background-color: var(--bg);
+  /* background-color: #e8e7ff; */
+  /* background-color:#f5f5ff; */
+  /* background-color: #f8f8f8; */
+  background-color: #ffffff;
+  transition: 0.2s ease-out;
+  font-family: "Tajawal", sans-serif !important;
+  font-size: 1.25rem;
+}
+
+/* .mai { */
+  /* overflow: hidden; */
+  /* max-width: 44em; */
+  /* background-color: #f8f8f8; */
+  /* background-color: #ffffff; */
+  /* margin: 0 auto; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  /* align-items: center; */
+  /* padding: 0 2.4em; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* max-width: 678px; */
+  /* margin-top: 72px; */
+  /* padding: 2.175rem 1.0875rem; */
+  /* padding-top: 0px; */
+/* } */
+
+.social-cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+.circle-cont {
+  height: 32px;
+  width: 32px;
+  /* background-color: #bbb; */
+  border: 1px solid rgb(172, 186, 230);
+  border-radius: 50%;
+  display: inline-block;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  /* For mobile phones: */
+ main{
+   /* color: red; */
+   
+ }
+}
