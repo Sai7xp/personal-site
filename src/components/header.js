@@ -8,12 +8,12 @@ const Header = ({ siteTitle }) => (
       background: `white`,
       position: `fixed`,
       width: "100vw",
-      borderTop: `solid 3px var(--titleText)`,
+      borderTop: `solid 3px #4ad991`,
       zIndex: "9999",
       backgroundColor:"#f8f8f8",
       backgroundColor:"#ffffff",
       top: 0,
-      boxShadow: `#4ad991`,
+      boxShadow: `var(--navShadow)`,
     }}
   >
     <div
