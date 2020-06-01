@@ -1,5 +1,6 @@
 import React from "react"
 import "../styles/header.css"
+import siteIcon from "../images/site-icon.png"
 const Intro = () => {
   return (
     <div
@@ -19,7 +20,7 @@ const Intro = () => {
           }}
         >
           <img
-            src="https://sumanth.netlify.app/static/e1fb2a0bc274ccf67661a13f06199359/62b1f/ellipse.png"
+            src={siteIcon}
             alt=""
             srcset=""
             style={{ marginBottom: `0px` }}

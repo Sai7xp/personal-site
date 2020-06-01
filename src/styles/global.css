@@ -10,8 +10,8 @@
 
 body {
   --bg: white;
-  --textNormal: hsl(0, 0%, 30%);
-  --secondaryText: hsl(0, 0%, 30%);
+  --textNormal: hsl(0, 0%, 45%);
+  --secondaryText: hsl(0, 0%, 20%);
   --secondaryLinks: hsl(217, 89%, 52%);
   --titleText: #838feb;
   --navShadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
@@ -68,7 +68,7 @@ body {
 }
 
 .bg-svg{
-  width: 30%;
+  width: 34%;
   position: absolute;
   right: 0;
   top: 0;
@@ -84,7 +84,7 @@ body {
    
  }
  .bg-svg{
-  top: 14px;
-  width: 35%;
+  top: 25px;
+  /* width: 35%; */
 }
 }

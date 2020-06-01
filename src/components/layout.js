@@ -7,7 +7,7 @@ import "../styles/global.css"
 
 import { rhythm } from "../utils/typography"
 
-import bgSvg from "../images/bg1.svg"
+import bgSvg from "../images/bg2.svg"
 import bgSvg2 from "../images/download.svg"
 
 const listItems = [
@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <img className="bg-svg" src={bgSvg} alt=""></img>
+        <img className="bg-svg" src={bgSvg2} alt=""></img>
         <main>{children}</main>
       </div>
     </>
