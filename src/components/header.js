@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import logo from "../images/dummy.svg"
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -33,7 +34,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          Ed.
+          SO.
         </Link>
         <Link
           to="/"

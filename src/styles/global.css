@@ -70,9 +70,9 @@ body {
 .bg-svg{
   width: 34%;
   position: absolute;
-  right: 0;
+  right : 0;
   top: 0;
-  z-index: -1;
+  z-index:-1;
   opacity: 0.6;
 }
 
@@ -84,7 +84,7 @@ body {
    
  }
  .bg-svg{
-  top: 25px;
-  /* width: 35%; */
+  top: 10px;
+  width: 36%;
 }
 }

@@ -5,6 +5,22 @@ module.exports = {
     author: `@MovingMelody`,
   },
   plugins: [
+    // markdown plugins
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
@@ -31,6 +47,16 @@ module.exports = {
         theme_color: `#8280ff`,
         display: `minimal-ui`,
         icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    // Page loading spinner
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#8280ff`,
+        // Disable the loading spinner.
+        showSpinner: true,
       },
     },
   ],

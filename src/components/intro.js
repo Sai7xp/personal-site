@@ -1,6 +1,8 @@
 import React from "react"
 import "../styles/header.css"
 import siteIcon from "../images/site-icon.png"
+import bgSvg2 from "../images/download.svg"
+
 const Intro = () => {
   return (
     <div
@@ -13,6 +15,7 @@ const Intro = () => {
         boxShadow: "",
       }}
     >
+      <img className="bg-svg" src={bgSvg2} alt=""></img>
       <div style={{ margin: "0 28px" }}>
         <div
           style={{
@@ -94,7 +97,7 @@ const Intro = () => {
             margin: "10px 0",
             padding: 0,
             fontFamily: `"Tajawal",sans-serif`,
-            fontSize:`44px`
+            fontSize: `44px`,
           }}
         >
           Sai Sumanth
@@ -110,7 +113,7 @@ const Intro = () => {
           </a> */}
           <ul>
             <li>
-              <a href="https://www.github.com/Mr404Found">Github</a>
+              <a href="https://www.github.com/Mr404Found">Say Hi!</a>
               {/* <a href="mailto:saisumanth2303@gmail.com">Say Hi!</a> */}
             </li>
           </ul>
