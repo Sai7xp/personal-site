@@ -22,6 +22,7 @@ body {
   --h1: hsl(0, 0%, 15%);
   --h: hsl(0, 0%, 20%);
   --theme: #8280ff;
+  /* --theme: #4961DC; */
   background-color: var(--bg);
   /* background-color: #e8e7ff; */
   /* background-color:#f5f5ff; */
@@ -66,10 +67,24 @@ body {
   margin-right: 10px;
 }
 
+.bg-svg{
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+
 @media only screen and (max-width: 700px) {
   /* For mobile phones: */
  main{
    /* color: red; */
    
  }
+ .bg-svg{
+  top: 14px;
+  width: 35%;
+}
 }

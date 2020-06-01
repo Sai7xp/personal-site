@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
       background: `white`,
       position: `fixed`,
       width: "100vw",
-      borderTop: `solid 3px #4ad991`,
+      borderTop: `solid 3px ##C7D0FF`,
       zIndex: "9999",
       backgroundColor:"#f8f8f8",
       backgroundColor:"#ffffff",
@@ -35,33 +35,18 @@ const Header = ({ siteTitle }) => (
         >
           Ed.
         </Link>
-        {/* <Link
-          to="/"
-          style={{
-            color: `#323232`,
-            fontSize: `18px`,
-            float: `right`,
-            fontFamily: `'Inter',sans-serif`,
-            fontWeight: `500`,
-            margin: `0`,
-            textDecoration: `none`,
-          }}
-        >
-          Contact
-        </Link> */}
         <Link
           to="/"
           style={{
             color: `#323232`,
-            fontSize: `18px`,
             float: `right`,
+            fontSize:`1.15rem`,
             paddingLeft: "16px",
             paddingRight: "0px",
-            fontFamily: `'Inter',sans-serif`,
-            fontWeight: `500`,
+            fontFamily: `'Tajawal',sans-serif`,
+            fontWeight: `400`,
             margin: `0`,
             textDecoration: `none`,
-            
           }}
         >
           Articles
@@ -71,10 +56,10 @@ const Header = ({ siteTitle }) => (
           to="/"
           style={{
             color: `#323232`,
-            fontSize: `18px`,
+            fontSize: `1.15rem`,
             float: `right`,
-            fontFamily: `'Inter',sans-serif`,
-            fontWeight: `500`,
+            fontFamily: `'Tajawal',sans-serif`,
+            fontWeight: `300`,
             textDecoration: `none`,
           }}
         >
