@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Intro from "../components/intro"
 import Articles from "../components/articlesList"
+import About from "../components/aboutme"
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,8 @@ const IndexPage = () => (
       <div style={{ marginTop: `78px` }}></div>
       <Intro />
       <Articles/>
+      <About/>
+      
       <footer>
         {/*  © {new Date().getFullYear()}, Built with
         {` `}

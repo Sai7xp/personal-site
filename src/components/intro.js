@@ -16,6 +16,7 @@ const Intro = () => {
       }}
     >
       <img className="bg-svg" src={bgSvg2} alt=""></img>
+      <img className="bg-svg2" src={bgSvg2} alt=""></img>
       <div style={{ margin: "0 28px" }}>
         <div
           style={{
@@ -86,7 +87,7 @@ const Intro = () => {
           alignItems: "center",
           margin: "0 auto",
           // marginRight:`0px`,
-          fontFamily: `"Tajawal",sans-serif`,
+          // fontFamily: `"Tajawal",sans-serif`,
           lineHeight: `31px`,
         }}
       >

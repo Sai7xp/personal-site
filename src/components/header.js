@@ -1,8 +1,19 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import twitter from "../images/twitter.svg"
 
-import logo from "../images/dummy.svg"
+const HeaderLink = styled(Link)`
+  color: #000000;
+  font-size: 15px;
+  margin-right: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: none;
+`
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
@@ -11,15 +22,15 @@ const Header = ({ siteTitle }) => (
       width: "100vw",
       borderTop: `solid 3px ##C7D0FF`,
       zIndex: "9999",
-      backgroundColor:"#f8f8f8",
-      backgroundColor:"#ffffff",
+      backgroundColor: "#ffffff",
       top: 0,
       boxShadow: `var(--navShadow)`,
     }}
   >
     <div
       style={{
-        padding: `1.0rem 24px`,
+        padding: `0.7rem 20px`,
+        paddingTop: `0.4rem`,
         maxWidth: "37em",
         justifyContent: "space-between",
         alignItems: "center",
@@ -27,45 +38,36 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h2 style={{ margin: 0 }}>
-        <Link
-          to="/"
+        <HeaderLink to="/">Home</HeaderLink>
+        <HeaderLink to="/">About</HeaderLink>
+        <HeaderLink to="/">Blog</HeaderLink>
+        <div
           style={{
-            color: `var(--theme)`,
-            textDecoration: `none`,
-          }}
-        >
-          SO.
-        </Link>
-        <Link
-          to="/"
-          style={{
-            color: `#323232`,
             float: `right`,
-            fontSize:`1.15rem`,
-            paddingLeft: "16px",
-            paddingRight: "0px",
-            fontFamily: `'Tajawal',sans-serif`,
-            fontWeight: `400`,
-            margin: `0`,
-            textDecoration: `none`,
+            paddingTop: `6.8px`,
           }}
         >
-          Articles
-        </Link>
+          <img
+            src="https://image.flaticon.com/icons/svg/1415/1415431.svg"
+            alt=""
+            width="18"
+            style={{
+              float: `right`,
+              marginLeft: `24px`,
 
-        <Link
-          to="/"
-          style={{
-            color: `#323232`,
-            fontSize: `1.15rem`,
-            float: `right`,
-            fontFamily: `'Tajawal',sans-serif`,
-            fontWeight: `300`,
-            textDecoration: `none`,
-          }}
-        >
-          About
-        </Link>
+              marginBottom: `0`,
+            }}
+          />
+          <img
+            src="https://image.flaticon.com/icons/svg/733/733635.svg"
+            alt=""
+            width="18"
+            style={{
+              float: `right`,
+              marginBottom: `0`,
+            }}
+          />
+        </div>
       </h2>
     </div>
   </header>
