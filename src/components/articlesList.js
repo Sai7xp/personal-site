@@ -23,7 +23,7 @@ const articlesList = () => {
           fontSize: `1.4rem`,
           textRendering: `optimizeLegibility`,
           fontWeight: `bold`,
-          fontFamily: `"Apercu",monospace`,
+          // fontFamily: `"Apercu",monospace`,
         }}
       >
         🍛 Flutter Firebase Google sign-in Auth splashscreen

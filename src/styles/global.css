@@ -26,7 +26,7 @@ body {
   --secondaryText: hsl(0, 0%, 20%);
   --secondaryLinks: hsl(217, 89%, 52%);
   --titleText: #838feb;
-  --navShadow: 0 4px 6px 0 hsla(0, 0%, 30%, 0.05);
+  --navShadow: 0 4px 6px 0 hsla(0, 1%, 38%, 0.05);
   --navBorder: none;
   --navBtmShadow: 0 -2px 8px 0 hsla(0, 0%, 30%, 0.05);
   --navLink: hsl(243, 15%, 45%);
@@ -34,14 +34,10 @@ body {
   --h1: hsl(0, 0%, 15%);
   --h: hsl(0, 0%, 20%);
   --theme: #8280ff;
-  /* --theme: #4961DC; */
   background-color: var(--bg);
-  /* background-color: #e8e7ff; */
-  /* background-color:#f5f5ff; */
-  /* background-color: #f8f8f8; */
   background-color: #ffffff;
   transition: 0.2s ease-out;
-  font-family: "Apercu", sans-serif !important;
+  font-family: "Tajawal", sans-serif !important;
   font-size: 1.25rem;
 }
 
@@ -140,9 +136,10 @@ body {
 @media only screen and (max-width: 700px) {
   /* For mobile phones: */
   .bg-svg {
-    top: 6px;
-    width: 36%;
+    top: 0px;
+    width: 37%;
   }
+  
 }
 
 /* @media screen and (min-width: 360px) { */
@@ -163,5 +160,8 @@ body {
 width: 20%;
 margin-right: 250px;
 margin-top: 5px;
+}
+.bg-svg2{
+  opacity: 0.05;
 }
 }
