@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import twitter from "../images/twitter.svg"
-
+import scrollTo from "gatsby-plugin-smoothscroll"
 const HeaderLink = styled(Link)`
   color: #000000;
   font-size: 15px;
@@ -25,6 +25,7 @@ const Header = ({ siteTitle }) => (
       backgroundColor: "#ffffff",
       top: 0,
       boxShadow: `var(--navShadow)`,
+      
     }}
   >
     <div
@@ -40,7 +41,7 @@ const Header = ({ siteTitle }) => (
       <h2 style={{ margin: 0 }}>
         <HeaderLink to="/">Home</HeaderLink>
         <HeaderLink to="/">About</HeaderLink>
-        <HeaderLink to="/">Blog</HeaderLink>
+        <HeaderLink to="/blog">Blog</HeaderLink>
         <div
           style={{
             float: `right`,

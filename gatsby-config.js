@@ -41,8 +41,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Moving Melody`,
-        short_name: `Summu`,
+        name: `Sumanth Portfolio`,
+        short_name: `Sumanth2303`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#8280ff`,
@@ -57,8 +57,21 @@ module.exports = {
         // Setting a color is optional.
         color: `#8280ff`,
         // Disable the loading spinner.
-        showSpinner: true,
+        showSpinner: false,
       },
     },
+
+    // page progress plugin
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: ["/", { regex: "^/blog" }],
+        excludePaths: [],
+        height: 1.8,
+        prependToBody: false,
+        color: `#11998e`,
+      },
+    },
+    `gatsby-plugin-smoothscroll`,
   ],
 }

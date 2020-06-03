@@ -7,6 +7,7 @@ import Intro from "../components/intro"
 import Articles from "../components/articlesList"
 import About from "../components/aboutme"
 
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />

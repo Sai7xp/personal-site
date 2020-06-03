@@ -15,9 +15,21 @@ const AboutDesc = styled.h2`
 
 function AboutMe() {
   return (
-    <div style={{ marginTop: `40px`}}>
-   
-     <img className="abt-svg" src={svg} alt="" ></img>
+    <div style={{ marginTop: `40px` }} id="test-id" >
+      <h4 
+        style={{
+          fontFamily: `"Inter", sans-serif`,
+          margin: `0`,
+          marginBottom: `15px`,
+          color: `#444452`,
+
+          // textAlign:`center`,
+          // textDecorationLine:`underline`
+        }}
+      >
+        <span>02. ABOUT ME</span>
+      </h4>
+      <img className="abt-svg" src={svg} alt=""></img>
       <AboutDesc className="abtxt">
         Hello!{" "}
         <span class="wave">

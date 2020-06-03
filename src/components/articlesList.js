@@ -3,18 +3,17 @@ import React from "react"
 const articlesList = () => {
   return (
     <div style={{ marginTop: `40px` }}>
-      <h1
-        style={{ 
-          fontFamily: `"Quicksand",sans-serif`, 
-          margin: `0` ,
-          marginBottom:`15px`,
-          color:`var(--theme)`,
-          textAlign:`center`,
-          // textDecorationLine:`underline`
-          }}
+      <h4
+        className=".article-head"
+        style={{
+          fontFamily: `"Inter", sans-serif`,
+          margin: `0`,
+          marginBottom: `15px`,
+          color: `#444452`,
+        }}
       >
-        {/* Recent Articles */}
-      </h1>
+        <span>01. POPULAR ARTICLES</span>
+      </h4>
       <a
         style={{
           // textAlign:`center`,
@@ -34,7 +33,7 @@ const articlesList = () => {
           // textAlign:`center`,
           color: `var(--textNormal)`,
           marginTop: `0`,
-          fontSize:`0.8rem`
+          fontSize: `0.8rem`,
         }}
       >
         March 23, 2020
@@ -45,7 +44,7 @@ const articlesList = () => {
           color: `var(--secondaryText)`,
           marginTop: `8px`,
           fontSize: `1rem`,
-          lineHeight:`1.3`,
+          lineHeight: `1.3`,
           fontFamily: `'Quicksand',sans-serif`,
         }}
       >
