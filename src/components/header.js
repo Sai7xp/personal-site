@@ -13,6 +13,18 @@ const HeaderLink = styled(Link)`
   font-weight: 400;
   text-decoration: none;
 `
+const HeaderLink2 = styled.button`
+  color: #444452;
+  font-size: 15px;
+  margin-right: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  background: none;
+  outline: none;
+`
 
 const Header = ({ siteTitle }) => (
   <header
@@ -39,12 +51,10 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h2 style={{ margin: 0 }}>
-        <HeaderLink to="/" activeStyle={{ color: `var(--tblue)`, }}>
+        <HeaderLink to="/" activeStyle={{ color: `var(--tblue)` }}>
           Home
         </HeaderLink>
-        <HeaderLink to="/" activeStyle={{ color: `` }}>
-          About
-        </HeaderLink>
+        <HeaderLink2 onClick={() => scrollTo("#test-id")}>About</HeaderLink2>
         <HeaderLink to="/blog" activeStyle={{ color: `var(--tblue)` }}>
           Blog
         </HeaderLink>

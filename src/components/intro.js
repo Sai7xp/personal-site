@@ -2,8 +2,27 @@ import React from "react"
 import "../styles/header.css"
 import siteIcon from "../images/site-icon.png"
 import bgSvg2 from "../images/download.svg"
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 const Intro = () => {
+  const data = useStaticQuery(graphql`
+    query BioQuery {
+      avatar: file(absolutePath: { regex: "/site-icon.png/" }) {
+        childImageSharp {
+          fixed(width: 140) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `)
   return (
     <div
       style={{
@@ -18,19 +37,7 @@ const Intro = () => {
       <img className="bg-svg" src={bgSvg2} alt=""></img>
       <img className="bg-svg2" src={bgSvg2} alt=""></img>
       <div style={{ margin: "0 28px" }}>
-        <div
-          style={{
-            maxWidth: 140,
-          }}
-        >
-          <img
-            src={siteIcon}
-            alt=""
-            srcset=""
-            style={{ marginBottom: `0px` }}
-          />
-        </div>
-
+        <Image fixed={data.avatar.childImageSharp.fixed} style={{marginBottom:`0`}} />
         <div
           style={{
             display: "flex",
@@ -96,7 +103,7 @@ const Intro = () => {
             color: "var(--theme)",
             fontWeight: `800`,
             marginTop: "14px",
-            marginBottom:`4px`,
+            marginBottom: `4px`,
             padding: 0,
             fontFamily: `"Tajawal",sans-serif`,
             fontSize: `44px`,

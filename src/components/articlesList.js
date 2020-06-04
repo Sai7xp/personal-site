@@ -25,7 +25,8 @@ const articlesList = () => {
           // fontFamily: `"Apercu",monospace`,
         }}
       >
-        🍛 Flutter Firebase Google sign-in Auth splashscreen
+        🥘 Flutter Firebase Google sign-in Auth splashscreen
+        {/* 🍛 */}
       </a>
       <br />
       <small
@@ -42,7 +43,8 @@ const articlesList = () => {
         style={{
           // textAlign:`center`,
           color: `var(--secondaryText)`,
-          marginTop: `8px`,
+          // marginTop: `8px`,
+          // marginBottom: `8px`,
           fontSize: `1rem`,
           lineHeight: `1.3`,
           fontFamily: `'Quicksand',sans-serif`,
@@ -50,6 +52,45 @@ const articlesList = () => {
       >
         Firebase is a mobile platform by Google. Stores data in JSON format. It
         provides backend services.
+      </p>
+      <a
+        style={{
+          // textAlign:`center`,
+          color: `var(--theme)`,
+          margin: `0`,
+          fontSize: `1.4rem`,
+          textRendering: `optimizeLegibility`,
+          fontWeight: `bold`,
+          // fontFamily: `"Apercu",monospace`,
+        }}
+      >
+        <span>🍳</span> How to build a blog in 10 minutes with GatsbyJs
+        {/* 🍛 */}
+      </a>
+      <br />
+      <small
+        style={{
+          // textAlign:`center`,
+          color: `var(--textNormal)`,
+          marginTop: `0`,
+          fontSize: `0.8rem`,
+        }}
+      >
+        March 26, 2018
+      </small>
+      <p
+        style={{
+          // textAlign:`center`,
+          color: `var(--secondaryText)`,
+          // marginTop: `8px`,
+          fontSize: `1rem`,
+          lineHeight: `1.3`,
+          fontFamily: `'Quicksand',sans-serif`,
+        }}
+      >
+        Gatsby is a React-based, GraphQL powered, static site generator. ... It
+        uses powerful preconfiguration to build a site that uses only static
+        files.
       </p>
     </div>
   )

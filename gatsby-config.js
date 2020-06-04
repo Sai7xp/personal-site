@@ -1,3 +1,4 @@
+const { createFilePath } = require(`gatsby-source-filesystem`)
 module.exports = {
   siteMetadata: {
     title: `Sumanth.`,
@@ -42,9 +43,9 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Sumanth Portfolio`,
-        short_name: `Sumanth2303`,
+        short_name: `Sai Sumanth`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#f8f8f8`,
         theme_color: `#8280ff`,
         display: `minimal-ui`,
         icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
@@ -67,11 +68,22 @@ module.exports = {
       options: {
         includePaths: ["/", { regex: "^/blog" }],
         excludePaths: [],
-        height: 1.8,
+        height: 2.8,
         prependToBody: false,
         color: `#4AD991`,
       },
     },
     `gatsby-plugin-smoothscroll`,
   ],
+}
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
 }

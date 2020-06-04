@@ -1,4 +1,5 @@
 ---
+path:"/post-one"
 title: Quality Server-Side Rendering with React 
 date: "2019-12-22T13:15:03.284Z"
 description: "Server Side Rendering or SSR is a hot topic in the React community, learn about how does SSR actually works."
