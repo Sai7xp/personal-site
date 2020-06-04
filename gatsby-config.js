@@ -69,7 +69,7 @@ module.exports = {
         excludePaths: [],
         height: 1.8,
         prependToBody: false,
-        color: `#11998e`,
+        color: `#4AD991`,
       },
     },
     `gatsby-plugin-smoothscroll`,

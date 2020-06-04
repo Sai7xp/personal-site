@@ -5,7 +5,7 @@ import styled from "styled-components"
 import twitter from "../images/twitter.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
 const HeaderLink = styled(Link)`
-  color: #000000;
+  color: #444452;
   font-size: 15px;
   margin-right: 16px;
   font-family: "IBM Plex Mono", monospace;
@@ -24,8 +24,8 @@ const Header = ({ siteTitle }) => (
       zIndex: "9999",
       backgroundColor: "#ffffff",
       top: 0,
+      // padding:"10px",
       boxShadow: `var(--navShadow)`,
-      
     }}
   >
     <div
@@ -39,9 +39,16 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h2 style={{ margin: 0 }}>
-        <HeaderLink to="/">Home</HeaderLink>
-        <HeaderLink to="/">About</HeaderLink>
-        <HeaderLink to="/blog">Blog</HeaderLink>
+        <HeaderLink to="/" activeStyle={{ color: `var(--tblue)`, }}>
+          Home
+        </HeaderLink>
+        <HeaderLink to="/" activeStyle={{ color: `` }}>
+          About
+        </HeaderLink>
+        <HeaderLink to="/blog" activeStyle={{ color: `var(--tblue)` }}>
+          Blog
+        </HeaderLink>
+
         <div
           style={{
             float: `right`,
@@ -49,25 +56,26 @@ const Header = ({ siteTitle }) => (
           }}
         >
           <img
-            src="https://image.flaticon.com/icons/svg/1415/1415431.svg"
+            src="https://image.flaticon.com/icons/svg/2917/2917242.svg"
             alt=""
-            width="18"
+            width="19"
             style={{
               float: `right`,
               marginLeft: `24px`,
-
               marginBottom: `0`,
             }}
-          />
-          <img
-            src="https://image.flaticon.com/icons/svg/733/733635.svg"
-            alt=""
-            width="18"
-            style={{
-              float: `right`,
-              marginBottom: `0`,
-            }}
-          />
+          />{" "}
+          <a href="https://twitter.com/MovingMelody" target="_blank">
+            <img
+              src="https://image.flaticon.com/icons/svg/733/733635.svg"
+              alt=""
+              width="18"
+              style={{
+                float: `right`,
+                marginBottom: `0`,
+              }}
+            />
+          </a>
         </div>
       </h2>
     </div>

@@ -2,6 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
+
+:root{
+  --tgreen:#4AD991;
+  --tblue:#8280ff;
+  --tred:#ff7285;
+  --torange:#FFC483;
+}
+
+
+
+
+
+
 @font-face {
   font-family: "Apercu";
   font-style: normal;
@@ -13,6 +26,12 @@
   font-style: normal;
   font-weight: 100;
   src: url(../styles/fonts/Objective.ttf);
+}
+@font-face {
+  font-family: "Gilroy";
+  font-style: normal;
+  /* font-weight: 100; */
+  src: url(../styles/fonts/Gilroy-Regular.ttf);
 }
 
 * {
@@ -35,8 +54,10 @@ body {
   --h1: hsl(0, 0%, 15%);
   --h: hsl(0, 0%, 20%);
   --theme: #8280ff;
+  /* --theme: #2E3E4D; */
   background-color: var(--bg);
   background-color: #ffffff;
+  /* background-color: #E6ECF2; */
   transition: 0.2s ease-out;
   font-family: "Tajawal", sans-serif !important;
   font-size: 1.25rem;

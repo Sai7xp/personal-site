@@ -41,9 +41,9 @@ const Intro = () => {
         >
           <div className="social-cont">
             <div className="circle-cont">
-              <a href="">
+              <a href="mailto:saisumanth2303gmail.com">
                 <img
-                  src="https://image.flaticon.com/icons/svg/2111/2111628.svg"
+                  src="https://image.flaticon.com/icons/svg/3011/3011178.svg"
                   alt=""
                   width="30"
                 />
@@ -62,7 +62,7 @@ const Intro = () => {
             <div className="circle-cont">
               <a href="">
                 <img
-                  src="https://image.flaticon.com/icons/svg/732/732245.svg"
+                  src="https://image.flaticon.com/icons/svg/889/889111.svg"
                   alt=""
                   width="30"
                 />
@@ -95,7 +95,8 @@ const Intro = () => {
           style={{
             color: "var(--theme)",
             fontWeight: `800`,
-            margin: "10px 0",
+            marginTop: "14px",
+            marginBottom:`4px`,
             padding: 0,
             fontFamily: `"Tajawal",sans-serif`,
             fontSize: `44px`,
@@ -114,7 +115,7 @@ const Intro = () => {
           </a> */}
           <ul>
             <li>
-              <a href="https://www.github.com/Mr404Found">Say Hi!</a>
+              <a href="https://www.github.com/Mr404Found">Say Hello!</a>
               {/* <a href="mailto:saisumanth2303@gmail.com">Say Hi!</a> */}
             </li>
           </ul>
