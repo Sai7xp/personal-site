@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import SocialLinks from "../components/socialLinks"
 import Header from "./header"
 import "../styles/global.css"
 
@@ -31,15 +31,16 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+    
       <div
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: 678,
+          maxWidth: 690,
           // marginTop: "72px",
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.56)} ${rhythm(3 / 4)}`,
         }}
-      >
+    >
         <main>{children}</main>
       </div>
     </>

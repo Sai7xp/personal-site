@@ -1,4 +1,3 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
 module.exports = {
   siteMetadata: {
     title: `Sumanth.`,
@@ -11,6 +10,13 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     {
@@ -75,15 +81,4 @@ module.exports = {
     },
     `gatsby-plugin-smoothscroll`,
   ],
-}
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
 }

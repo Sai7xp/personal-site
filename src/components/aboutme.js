@@ -15,8 +15,8 @@ const AboutDesc = styled.h2`
 
 function AboutMe() {
   return (
-    <div style={{ marginTop: `40px` }} id="test-id" >
-      <h4 
+    <div style={{ marginTop: `80px` }} id="test-id">
+      <h4
         style={{
           fontFamily: `"Inter", sans-serif`,
           margin: `0`,
@@ -27,7 +27,7 @@ function AboutMe() {
           // textDecorationLine:`underline`
         }}
       >
-        <span>02. ABOUT ME</span>
+        {/* <span>02. ABOUT ME</span> */}
       </h4>
       <img className="abt-svg" src={svg} alt=""></img>
       <AboutDesc className="abtxt">
@@ -39,7 +39,13 @@ function AboutMe() {
       </AboutDesc>
       <AboutDesc>
         I'm <span className="name">Sai Sumanth,</span> a design-minded front-end
-        web de veloper, UI/UX Designer &amp; Firebase Lover.
+        web developer, UI/UX Designer &amp; Firebase Lover. People find me to
+        be an upbeat, self-motivated team player with excellent communication
+        skills.<br/>
+        <br/>
+        
+        For the past several years I have worked in lead qualification,
+        telemarketing, and customer service in the technology industry.
       </AboutDesc>
     </div>
   )

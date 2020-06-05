@@ -1,13 +1,126 @@
 import React from "react"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import ArticlesList from "../components/articlesList"
-export default function blog() {
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <ArticlesList/>
-    </Layout>
-  )
+
+class Blog extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+
+    return (
+      <Layout>
+        <SEO title="Blog" />
+        <div style={{ marginTop: 24 }}>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <article key={node.fields.slug} style={{ marginBottom: 48 }}>
+                {/*  <header> 
+                <h2
+                  style={{
+                    marginBottom: 0,
+                    fontFamily: `Tajawal, sans-serif`,
+                  }}
+                >
+                  <Link
+                    style={{ boxShadow: `none`, textDecoration: `none` }}
+                    to="/"
+                  >
+                    {title}
+                  </Link>
+                </h2>
+                <small
+                  style={{
+                    color: "var(--secondaryText)",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  {node.frontmatter.date}
+                </small> */}
+
+                <a
+                  style={{
+                    // textAlign:`center`,
+                    color: `var(--theme)`,
+                    margin: `0`,
+                    fontSize: `1.4rem`,
+                    textRendering: `optimizeLegibility`,
+                    fontWeight: `bold`,
+                    lineHeight: `1.0`,
+                    // fontFamily: `"Apercu",monospace`,
+                  }}
+                >
+                  {title}
+                  {/* 🍛 */}
+                </a>
+                <br />
+                <small
+                  style={{
+                    // textAlign:`center`,
+                    color: `var(--textNormal)`,
+                    marginTop: `0`,
+                    fontSize: `0.8rem`,
+                  }}
+                >
+                 {node.frontmatter.date}
+                </small>
+                <p
+                  style={{
+                    // textAlign:`center`,
+                    color: `var(--secondaryText)`,
+                    // marginTop: `8px`,
+                    // marginBottom: `8px`,
+                    fontSize: `1rem`,
+                    lineHeight: `1.3`,
+                    fontFamily: `'Quicksand',sans-serif`,
+                  }}
+                >
+                 {node.frontmatter.description}
+                </p>
+
+                {/* </header> */}
+                {/* <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                    style={{ marginTop: 6 }}
+                  />
+                </section> */}
+              </article>
+            )
+          })}
+        </div>
+      </Layout>
+    )
+  }
 }
+
+export default Blog
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`

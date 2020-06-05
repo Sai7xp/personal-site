@@ -30,7 +30,7 @@ Although there are few things that we can do to optimize the performance of a cl
 3. Show a certain part of the layout even if the majority part of the layout is dynamically added like the top navbar which has a login button.
 4. You can avoid loading the dynamic parts of the application initially.
 
-For the sake of user experience please always load the skeleton first, if the height or width is not fixed with the element please load it at the last.
+For the sake of user please always load the skeleton first, if the height or width is not fixed with the element please load it at the last.
 
 When using Twitter to search users it always shifts the user being displayed below after it completely loads and whenever I am about to click I click the wrong place.
 

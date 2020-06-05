@@ -7,7 +7,7 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 const HeaderLink = styled(Link)`
   color: #444452;
   font-size: 15px;
-  margin-right: 16px;
+  margin-right: 15px;
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
   font-weight: 400;
@@ -16,7 +16,7 @@ const HeaderLink = styled(Link)`
 const HeaderLink2 = styled.button`
   color: #444452;
   font-size: 15px;
-  margin-right: 16px;
+  /* margin-right: 188px; */
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
   font-weight: 400;
@@ -24,6 +24,7 @@ const HeaderLink2 = styled.button`
   border: none;
   background: none;
   outline: none;
+  cursor:pointer;
 `
 
 const Header = ({ siteTitle }) => (
@@ -42,9 +43,9 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        padding: `0.7rem 20px`,
-        paddingTop: `0.4rem`,
-        maxWidth: "37em",
+        padding: `1rem 20px`,
+        paddingTop: `0.25rem`,
+        maxWidth: "36.5em",
         justifyContent: "space-between",
         alignItems: "center",
         margin: "0 auto",
@@ -54,10 +55,14 @@ const Header = ({ siteTitle }) => (
         <HeaderLink to="/" activeStyle={{ color: `var(--tblue)` }}>
           Home
         </HeaderLink>
-        <HeaderLink2 onClick={() => scrollTo("#test-id")}>About</HeaderLink2>
         <HeaderLink to="/blog" activeStyle={{ color: `var(--tblue)` }}>
-          Blog
+          Articles
         </HeaderLink>
+        <HeaderLink to="/about" activeStyle={{ color: `var(--tblue)` }}>
+          About
+        </HeaderLink>
+        {/* <HeaderLink2 onClick={() => scrollTo("#test-id")}>About</HeaderLink2> */}
+        
 
         <div
           style={{

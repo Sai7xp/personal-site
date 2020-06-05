@@ -22,6 +22,7 @@ const articlesList = () => {
           fontSize: `1.4rem`,
           textRendering: `optimizeLegibility`,
           fontWeight: `bold`,
+          lineHeight:`1.0`
           // fontFamily: `"Apercu",monospace`,
         }}
       >
@@ -61,6 +62,7 @@ const articlesList = () => {
           fontSize: `1.4rem`,
           textRendering: `optimizeLegibility`,
           fontWeight: `bold`,
+          lineHeight:`1.0`
           // fontFamily: `"Apercu",monospace`,
         }}
       >
@@ -76,7 +78,7 @@ const articlesList = () => {
           fontSize: `0.8rem`,
         }}
       >
-        March 26, 2018
+        March 26, 2018 ~ 5 min read
       </small>
       <p
         style={{

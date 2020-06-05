@@ -1,10 +1,9 @@
 import React from "react"
 import "../styles/header.css"
-import siteIcon from "../images/site-icon.png"
 import bgSvg2 from "../images/download.svg"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
+import SocialLinks from "../components/socialLinks"
 const Intro = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -37,55 +36,11 @@ const Intro = () => {
       <img className="bg-svg" src={bgSvg2} alt=""></img>
       <img className="bg-svg2" src={bgSvg2} alt=""></img>
       <div style={{ margin: "0 28px" }}>
-        <Image fixed={data.avatar.childImageSharp.fixed} style={{marginBottom:`0`}} />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            maxWidth: 0,
-            margin: "6px auto",
-          }}
-        >
-          <div className="social-cont">
-            <div className="circle-cont">
-              <a href="mailto:saisumanth2303gmail.com">
-                <img
-                  src="https://image.flaticon.com/icons/svg/3011/3011178.svg"
-                  alt=""
-                  width="30"
-                />
-              </a>
-            </div>
-            <div className="circle-cont">
-              <a href="https://twitter.com/Mr404Found">
-                <img
-                  src="https://image.flaticon.com/icons/svg/733/733579.svg"
-                  alt=""
-                  width="30"
-                />
-              </a>
-            </div>
-
-            <div className="circle-cont">
-              <a href="">
-                <img
-                  src="https://image.flaticon.com/icons/svg/889/889111.svg"
-                  alt=""
-                  width="30"
-                />
-              </a>
-            </div>
-            <div className="circle-cont">
-              <a href="">
-                <img
-                  src="https://image.flaticon.com/icons/svg/1384/1384063.svg"
-                  alt=""
-                  width="30"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          style={{ marginBottom: `0` }}
+        />
+        <SocialLinks/>
       </div>
       <div
         style={{

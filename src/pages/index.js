@@ -14,7 +14,6 @@ const IndexPage = () => (
       <div style={{ marginTop: `78px` }}></div>
       <Intro />
       <Articles />
-      <About />
 
       <footer style={{
          textAlign: `center`,
