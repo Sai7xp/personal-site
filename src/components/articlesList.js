@@ -12,12 +12,25 @@ const articlesList = () => {
           marginBottom: `15px`,
           color: `#444452`,
           color: `var(--theme)`,
-          fontSize:`18px`
+          fontSize:`17px`
         }}
       >
         <span>LATEST ARTICLES</span>
         
+        <button style={{
+          border:`1px solid #F7B801`,
+          borderRadius:`6px`,
+          padding:`3.5px 8px`,
+          marginLeft:`20px`,
+          outline:`none`,
+          fontSize:`12px`,
+          backgroundColor:`#FFF7DD`,
+          color:`#F7B801`,
+          fontFamily:`"Quicksand"`,
+        }}>
+          Read More
           
+        </button>
       </h4>
       <a
         style={{
@@ -103,6 +116,49 @@ const articlesList = () => {
         uses powerful preconfiguration to build a site that uses only static
         files. */}
       </p>
+        <button style={{
+          border:`1px solid #F7B801`,
+          borderRadius:`6px`,
+          padding:`3px 8px`,
+          // margin:`0 auto`
+          
+          fontSize:`12px`,
+          backgroundColor:`#FFF7DD`,
+          backgroundColor:`transparent`,
+          color:`#F7B801`,
+          fontFamily:`"Quicksand"`,
+        }}>
+          #javascript
+        </button>
+        <button style={{
+          border:`1px solid #4ad991`,
+          borderRadius:`6px`,
+          padding:`3px 8px`,
+          // margin:`0 auto`
+          marginLeft:`15px`,
+          fontSize:`12px`,
+          backgroundColor:`#daf7eb`,
+          // backgroundColor:`transparent`,
+          color:`#4ad991`,
+          fontFamily:`"Quicksand"`,
+        }}>
+          #flutter
+        </button>
+        <button style={{
+          border:`1px solid #8280ff`,
+          borderRadius:`6px`,
+          padding:`3px 8px`,
+          marginLeft:`15px`,
+          fontSize:`12px`,
+          backgroundColor:`#ebe7ff`,
+          backgroundColor:`transparent`,
+          color:`#8280ff`,
+          fontFamily:`"Quicksand"`,
+        }}>
+          #gatsbyjs
+        </button>
+        
+
     </div>
   )
 }

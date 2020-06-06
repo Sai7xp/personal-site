@@ -4,6 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import twitter from "../images/twitter.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 const HeaderLink = styled(Link)`
   color: #444452;
   font-size: 15px;
@@ -24,7 +25,7 @@ const HeaderLink2 = styled.button`
   border: none;
   background: none;
   outline: none;
-  cursor:pointer;
+  cursor: pointer;
 `
 
 const Header = ({ siteTitle }) => (
@@ -42,7 +43,7 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        padding: `0.7rem 20px`,
+        padding: `0.7rem 18px`,
         paddingTop: `0.4rem`,
         maxWidth: "37.4em",
         justifyContent: "space-between",
@@ -50,48 +51,48 @@ const Header = ({ siteTitle }) => (
         margin: "0 auto",
       }}
     >
-      <h2 style={{ margin: 0 }}>
+      {/* <h2 style={{ margin: 0 }}> */}
         <HeaderLink to="/" activeStyle={{ color: `var(--tblue)` }}>
           Home
         </HeaderLink>
-        <HeaderLink to="/blog" activeStyle={{ color: `var(--tblue)` }}>
+        <HeaderLink to="/blog" activeStyle={{ color: `var(--tblue)`,  }}>
+        {/* <AniLink paintDrip to="/blog"> */}
           Articles
+          {/* </AniLink> */}
         </HeaderLink>
         <HeaderLink to="/about" activeStyle={{ color: `var(--tblue)` }}>
           About
         </HeaderLink>
         {/* <HeaderLink2 onClick={() => scrollTo("#test-id")}>About</HeaderLink2> */}
-        
-
-        <div
+      {/* </h2> */}
+      <div
+        style={{
+          float: `right`,
+          paddingTop: `6px`,
+        }}
+      >
+        <img
+          src="https://image.flaticon.com/icons/svg/2917/2917242.svg"
+          alt=""
+          width="19"
           style={{
             float: `right`,
-            paddingTop: `3px`,
+            marginLeft: `24px`,
+            marginBottom: `0`,
           }}
-        >
+        />{" "}
+        <a href="https://twitter.com/MovingMelody" target="_blank">
           <img
-            src="https://image.flaticon.com/icons/svg/2917/2917242.svg"
+            src="https://image.flaticon.com/icons/svg/733/733635.svg"
             alt=""
-            width="19"
+            width="18"
             style={{
               float: `right`,
-              marginLeft: `24px`,
               marginBottom: `0`,
             }}
-          />{" "}
-          <a href="https://twitter.com/MovingMelody" target="_blank">
-            <img
-              src="https://image.flaticon.com/icons/svg/733/733635.svg"
-              alt=""
-              width="18"
-              style={{
-                float: `right`,
-                marginBottom: `0`,
-              }}
-            />
-          </a>
-        </div>
-      </h2>
+          />
+        </a>
+      </div>
     </div>
   </header>
 )

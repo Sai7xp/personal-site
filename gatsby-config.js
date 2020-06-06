@@ -40,6 +40,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-typography`,

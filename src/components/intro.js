@@ -4,6 +4,7 @@ import bgSvg2 from "../images/download.svg"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import SocialLinks from "../components/socialLinks"
+import Fade from "react-reveal/Fade"
 const Intro = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -35,54 +36,53 @@ const Intro = () => {
     >
       <img className="bg-svg" src={bgSvg2} alt=""></img>
       <img className="bg-svg2" src={bgSvg2} alt=""></img>
+
       <div style={{ margin: "0 28px" }}>
         <Image
           fixed={data.avatar.childImageSharp.fixed}
           style={{ marginBottom: `0` }}
         />
-        <SocialLinks/>
+        <SocialLinks />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margin: "0 auto",
-          // marginRight:`0px`,
-          // fontFamily: `"Tajawal",sans-serif`,
-          lineHeight: `31px`,
-        }}
-      >
-        <h1
+      <Fade big>
+        <div
           style={{
-            color: "var(--theme)",
-            fontWeight: `800`,
-            marginTop: "14px",
-            marginBottom: `4px`,
-            padding: 0,
-            fontFamily: `"Tajawal",sans-serif`,
-            fontSize: `44px`,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            margin: "0 auto",
+            lineHeight: `31px`,
           }}
         >
-          Sai Sumanth
-        </h1>
-        <p align="center">
-          Teenager who code. <br />
-          Gatsby Js Fanboy.
-          <br />
-          {/* <a href="mailto:saisumanth3203@gmail.com" style={{
-            color:`var(--theme)`
-          }}>
-            saisumanth3203@gmail.com
-          </a> */}
-          <ul>
-            <li className="hello1">
-              <a className="hello" href="https://www.github.com/Mr404Found">Say Hello!</a>
-              {/* <a href="mailto:saisumanth2303@gmail.com">Say Hi!</a> */}
-            </li>
-          </ul>
-        </p>
-      </div>
+        
+          <h1
+            style={{
+              color: "var(--theme)",
+              fontWeight: `800`,
+              marginTop: "18px",
+              marginBottom: `8px`,
+              padding: 0,
+              fontFamily: `"Tajawal",sans-serif`,
+              fontSize: `44px`,
+            }}
+          >
+            Sai Sumanth
+          </h1>
+          <p align="center">
+            Teenager who code. <br />
+            Gatsby Js Fanboy.
+            <br />
+            <ul>
+              <li className="hello1">
+                <a className="hello" href="https://www.github.com/Mr404Found">
+                  Say Hello!
+                </a>
+                {/* <a href="mailto:saisumanth2303@gmail.com">Say Hi!</a> */}
+              </li>
+            </ul>
+          </p>
+        </div>
+      </Fade>
     </div>
   )
 }
