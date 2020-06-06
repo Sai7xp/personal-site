@@ -64,10 +64,10 @@ const Intro = () => {
             fontSize: `44px`,
           }}
         >
-          SAI SUMANTH
+          Sai Sumanth
         </h1>
         <p align="center">
-          Regular guy who code. <br />
+          Teenager who code. <br />
           Gatsby Js Fanboy.
           <br />
           {/* <a href="mailto:saisumanth3203@gmail.com" style={{

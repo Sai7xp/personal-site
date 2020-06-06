@@ -37,7 +37,7 @@
 
 body {
   --bg: white;
-  --textNormal: hsl(0, 0%, 45%);
+  --textNormal: #383838;
   --secondaryText: hsl(0, 0%, 20%);
   --secondaryLinks: hsl(217, 89%, 52%);
   --titleText: #838feb;
@@ -54,7 +54,8 @@ body {
   background-color: #ffffff;
   /* background-color: #E6ECF2; */
   transition: 0.2s ease-out;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Gilroy", sans-serif !important;
+  /* font-family: "Quicksand", sans-serif !important; */
   font-size: 1.25rem;
 }
 

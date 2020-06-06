@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import svg1 from "../images/bg2.svg"
 class Blog extends React.Component {
   render() {
     const { data } = this.props
@@ -12,35 +12,21 @@ class Blog extends React.Component {
 
     return (
       <Layout>
+        <img
+          className="bg-svg2"
+          style={{
+            opacity: `0.1`,
+            zIndex: `-1`,
+          }}
+          src={svg1}
+          alt=""
+        ></img>
         <SEO title="Blog" />
         <div style={{ marginTop: 24 }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <article key={node.fields.slug} style={{ marginBottom: 48 }}>
-                {/*  <header> 
-                <h2
-                  style={{
-                    marginBottom: 0,
-                    fontFamily: `Tajawal, sans-serif`,
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none`, textDecoration: `none` }}
-                    to="/"
-                  >
-                    {title}
-                  </Link>
-                </h2>
-                <small
-                  style={{
-                    color: "var(--secondaryText)",
-                    fontSize: "0.9rem",
-                  }}
-                >
-                  {node.frontmatter.date}
-                </small> */}
-
                 <a
                   href={node.fields.slug}
                   style={{
@@ -51,26 +37,27 @@ class Blog extends React.Component {
                     textRendering: `optimizeLegibility`,
                     fontWeight: `bold`,
                     lineHeight: `1.0`,
-                    // fontFamily: `"Apercu",monospace`,
+                    fontFamily: `"Tajawal",sans-serif`,
                   }}
                 >
                   {title}
                   {/* 🍛 */}
                 </a>
                 <br />
-               
-                    <small
-                      style={{
-                        // textAlign:`center`,
-                        color: `var(--textNormal)`,
-                        marginTop: `0`,
-                        fontSize: `0.8rem`,
-                      }}
-                    >{node.frontmatter.date}
-                      {/* {} */}
-                      {/* {this.props.data.allFile.edges.node.birthTime} */}
-                    </small>
-                  
+
+                <small
+                  style={{
+                    // textAlign:`center`,
+                    color: `var(--textNormal)`,
+                    marginTop: `0`,
+                    fontSize: `0.8rem`,
+                  }}
+                >
+                  {node.frontmatter.date}
+                  {/* {} */}
+                  {/* {this.props.data.allFile.edges.node.birthTime} */}
+                </small>
+
                 <small
                   style={{
                     // textAlign:`center`,
@@ -106,16 +93,6 @@ class Blog extends React.Component {
                 >
                   {node.frontmatter.description}
                 </p>
-
-                {/* </header> */}
-                {/* <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: node.frontmatter.description || node.excerpt,
-                    }}
-                    style={{ marginTop: 6 }}
-                  />
-                </section> */}
               </article>
             )
           })}

@@ -4,62 +4,69 @@ import "./single-post.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-
+import author from "../images/site-icon.png"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const summu = this.props.data.file.birthTime
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    
 
     return (
-      <Layout>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
-        <article>
-          <header>
-            <h1
+      <div>
+        <Layout>
+          <SEO
+            title={post.frontmatter.title}
+            description={post.frontmatter.description || post.excerpt}
+          />
+        </Layout>
+        <div
+          style={{
+            maxWidth: `800px`,
+            margin: `0 auto`,
+            padding: `${rhythm(1.56)} ${rhythm(3 / 4)}`,
+            paddingTop: `0`,
+
+          }}
+        >
+          {/* <article> */}
+          {/* <header> */}
+          <h1 className="article-title"
+            style={{
+              // marginTop: rhythm(1),
+              marginTop: 0,
+              fontSize: `1.6em`,
+              color: `var(--theme)`,
+              // textAlign:`center`
+            }}
+          >
+            {post.frontmatter.title}
+          </h1>
+          <span
+            style={{
+              // ...scale(-1 / 5),
+              fontSize: `12px`,
+              display: `block`,
+              // marginTop: `4px`,
+              color:"#444452",
+              marginBottom: rhythm(1),
+            }}
+          >
+            {post.frontmatter.date}{" "}
+            <img
+              width="11"
               style={{
-                marginTop: rhythm(1),
-                marginBottom: 0,
+                margin: `0`,
+                marginLeft: `10px`,
+              
               }}
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginTop: -2,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-            <span
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginTop: -2,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.timeToRead} min read
-            </span>
-            <span
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginTop: -2,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {summu}
-            </span>
-          </header>
+              src="https://image.flaticon.com/icons/svg/1827/1827379.svg"
+              // src={author}
+              alt=""
+            />{" "}
+            {post.timeToRead} min read
+          </span>
+          {/* </header> */}
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             style={{
@@ -67,52 +74,57 @@ class BlogPostTemplate extends React.Component {
               marginRight: `auto`,
             }}
           />
-          <hr
+          <div
             style={{
               marginBottom: rhythm(1),
+              backgroundColor: `var(--theme)`,
+              width: `100%`,
+              height: `2px`,
+              opacity: `0.6`,
             }}
           />
-        </article>
+          {/* </article> */}
 
-        <nav>
-          <ul
+          <nav>
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <a to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </a>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+          <footer
             style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
+              textAlign: `center`,
+              marginTop: `40px`,
+              bottom: `0`,
+              fontSize: `0.7em`,
+              fontFamily: `"Montserrat",sans-serif`,
+              color: `rgb(51, 72, 101)`,
             }}
           >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
-        <footer
-          style={{
-            textAlign: `center`,
-            marginTop: `40px`,
-            bottom: `0`,
-            fontSize: `0.7em`,
-            fontFamily: `"Montserrat",sans-serif`,
-            color: `rgb(51, 72, 101)`,
-          }}
-        >
-          © {new Date().getFullYear()} | Designed by Sumanth.
-        </footer>
-      </Layout>
+            © {new Date().getFullYear()} | Designed by Sumanth.
+          </footer>
+        </div>
+      </div>
     )
   }
 }

@@ -6,26 +6,31 @@ h5,
 h6 {
   font-family: "Tajawal", sans-serif;
   margin-bottom: 12px;
-  margin-top: 52px;
+  font-size: 1em;
 }
 
 body {
   font-size: 1.25rem;
-  font-family: "Quicksand",sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 p {
-  line-height: 1.6em;
+  line-height: 1.5em;
   font-size: 18px;
   color: var(--textNormal);
+  color: #444452;
+  color: #383838;
+  color: #24292e;
+  /* color: var(--secondaryText); */
   transition: "color 0.2s ease-out, background 0.2s ease-out";
-  font-family: "Gilroy",sans-serif;
+  /* font-family: "Gilroy",sans-serif; */
 }
 
 h1 {
-  font-size: 2.2em;
-  line-height: 1.125em;
+  font-size: 1.4em;
+  /* line-height: 1.125em; */
   color: var(--h1);
+  color: #383838;
 }
 
 h2,
@@ -38,13 +43,21 @@ h6 {
 
 li {
   color: var(--textNormal);
-  line-height: 1.9em;
-  font-size: 21px;
+  /* line-height: 1.9em; */
+  font-size: 18px;
 }
 
+.article-title{
+  font-size: "1.6em",
+}
 @media only screen and (max-width: 700px) {
   p,
   li {
     font-size: 18px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .article-title{
+/* font-size: 28px; */
   }
 }

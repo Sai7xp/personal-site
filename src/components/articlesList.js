@@ -10,19 +10,22 @@ const articlesList = () => {
           margin: `0`,
           marginBottom: `15px`,
           color: `#444452`,
+          color: `var(--theme)`,
+          fontSize:`16px`
         }}
       >
-        <span>01. POPULAR ARTICLES</span>
+        <span>POPULAR ARTICLES</span>
       </h4>
       <a
         style={{
           // textAlign:`center`,
-          color: `var(--theme)`,
+          color: `var(--h)`,
+          color: `#444452`,
           margin: `0`,
-          fontSize: `1.4rem`,
+          fontSize: `1.2rem`,
           textRendering: `optimizeLegibility`,
-          fontWeight: `bold`,
-          lineHeight:`1.0`
+          // fontWeight: `bold`,
+          lineHeight:`1.0`,
           // fontFamily: `"Apercu",monospace`,
         }}
       >
@@ -35,10 +38,11 @@ const articlesList = () => {
           // textAlign:`center`,
           color: `var(--textNormal)`,
           marginTop: `0`,
-          fontSize: `0.8rem`,
+          fontSize: `0.7rem`,
+          fontFamily:`"MOntserrat", sans-serif`
         }}
       >
-        March 23, 2020
+        March 23, 2020 ~ 3 min read
       </small>
       <p
         style={{
@@ -48,20 +52,21 @@ const articlesList = () => {
           // marginBottom: `8px`,
           fontSize: `1rem`,
           lineHeight: `1.3`,
-          fontFamily: `'Quicksand',sans-serif`,
+          // fontFamily: `'Quicksand',sans-serif`,
         }}
       >
-        Firebase is a mobile platform by Google. Stores data in JSON format. It
-        provides backend services.
+        {/* Firebase is a mobile platform by Google. Stores data in JSON format. It
+        provides backend services. */}
       </p>
       <a
         style={{
           // textAlign:`center`,
           color: `var(--theme)`,
+          color: `#444452`,
           margin: `0`,
-          fontSize: `1.4rem`,
+          fontSize: `1.2rem`,
           textRendering: `optimizeLegibility`,
-          fontWeight: `bold`,
+          // fontWeight: `bold`,
           lineHeight:`1.0`
           // fontFamily: `"Apercu",monospace`,
         }}
@@ -75,7 +80,8 @@ const articlesList = () => {
           // textAlign:`center`,
           color: `var(--textNormal)`,
           marginTop: `0`,
-          fontSize: `0.8rem`,
+          fontFamily:`"MOntserrat", sans-serif`,
+          fontSize: `0.7rem`,
         }}
       >
         March 26, 2018 ~ 5 min read
@@ -90,9 +96,9 @@ const articlesList = () => {
           fontFamily: `'Quicksand',sans-serif`,
         }}
       >
-        Gatsby is a React-based, GraphQL powered, static site generator. ... It
+        {/* Gatsby is a React-based, GraphQL powered, static site generator. ... It
         uses powerful preconfiguration to build a site that uses only static
-        files.
+        files. */}
       </p>
     </div>
   )

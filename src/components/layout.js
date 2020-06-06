@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: 690,
+          maxWidth: 740,
           // marginTop: "72px",
           padding: `${rhythm(1.56)} ${rhythm(3 / 4)}`,
         }}

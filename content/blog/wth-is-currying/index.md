@@ -4,14 +4,14 @@ date: "2020-03-18T13:15:03.284Z"
 description: "Currying is an essential part of Functional Programming, let's see what the heck is it."
 imagepath: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square_200x200.svg/200px-Square_200x200.svg.png"
 ---
-
+# fuck you
 I know that you’re salivating, perhaps the dev world has become too delicious with JAMStack and now I’m talking about curry? So before you starve to death with these wonders of dev world let me introduce you to what currying is in general.
 
 Currying was named after [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry), what currying essentially means is taking a function which takes multiple parameter and converting it in to a function which only takes one parameter and returns a functions which then takes the next parameter.
 
 Currying is not JavaScript specific it is also a mathematical things just like `function` [ Remember good ol' f(x)? ]
 
-```dart
+```javascript
 // Not curried
 const add = (x, y) => x + y
 
