@@ -42,8 +42,8 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        padding: `0.7rem 20px`,
-        paddingTop: `0.39rem`,
+        padding: `0.58em 20px`,
+        paddingTop: `0.25em`,
         maxWidth: "36.5em",
         justifyContent: "space-between",
         alignItems: "center",
