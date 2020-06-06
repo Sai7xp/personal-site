@@ -1,5 +1,5 @@
 import React from "react"
-
+import {Link} from "gatsby"
 const articlesList = () => {
   return (
     <div style={{ marginTop: `40px` }}>
@@ -8,13 +8,16 @@ const articlesList = () => {
         style={{
           fontFamily: `"Inter", sans-serif`,
           margin: `0`,
+          display:`flex`,
           marginBottom: `15px`,
           color: `#444452`,
           color: `var(--theme)`,
-          fontSize:`16px`
+          fontSize:`18px`
         }}
       >
-        <span>POPULAR ARTICLES</span>
+        <span>LATEST ARTICLES</span>
+        
+          
       </h4>
       <a
         style={{

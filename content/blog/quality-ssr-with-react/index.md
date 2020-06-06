@@ -1,5 +1,5 @@
 ---
-title: Quality Server-Side Rendering with React 
+title: 🍳 Quality Server-Side Rendering with React 
 date: "2019-12-22T13:15:03.284Z"
 description: "Server Side Rendering or SSR is a hot topic in the React community, learn about how does SSR actually works."
 imagepath: "https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2016/11/16202709/js-logo-e1479328304359.png?fit=604%2C270&ssl=1"

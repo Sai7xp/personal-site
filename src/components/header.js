@@ -43,7 +43,7 @@ const Header = ({ siteTitle }) => (
     <div
       style={{
         padding: `0.7rem 20px`,
-        paddingTop: `0.58rem`,
+        paddingTop: `0.4rem`,
         maxWidth: "37.4em",
         justifyContent: "space-between",
         alignItems: "center",
@@ -66,7 +66,7 @@ const Header = ({ siteTitle }) => (
         <div
           style={{
             float: `right`,
-            paddingTop: `6.8px`,
+            paddingTop: `3px`,
           }}
         >
           <img

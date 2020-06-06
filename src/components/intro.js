@@ -76,8 +76,8 @@ const Intro = () => {
             saisumanth3203@gmail.com
           </a> */}
           <ul>
-            <li>
-              <a href="https://www.github.com/Mr404Found">Say Hello!</a>
+            <li className="hello1">
+              <a className="hello" href="https://www.github.com/Mr404Found">Say Hello!</a>
               {/* <a href="mailto:saisumanth2303@gmail.com">Say Hi!</a> */}
             </li>
           </ul>
