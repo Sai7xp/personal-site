@@ -9,7 +9,18 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [],
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false ,
+              noInlineHighlight: false,
+            },
+          },
+        ],
       },
     },
     {
@@ -63,8 +74,6 @@ module.exports = {
       options: {
         // Setting a color is optional.
         color: `#8280ff`,
-        // Disable the loading spinner.
-        showSpinner: false,
       },
     },
 
@@ -72,10 +81,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-progress",
       options: {
-        includePaths: ["/", { regex: "^/blog" }],
-        excludePaths: [],
-        height: 2.8,
-        prependToBody: false,
         color: `#4AD991`,
       },
     },

@@ -33,7 +33,6 @@ const Header = ({ siteTitle }) => (
       background: `white`,
       position: `fixed`,
       width: "100vw",
-      borderTop: `solid 3px ##C7D0FF`,
       zIndex: "9999",
       backgroundColor: "#ffffff",
       top: 0,
@@ -43,8 +42,8 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        padding: `1rem 20px`,
-        paddingTop: `0.25rem`,
+        padding: `0.7rem 20px`,
+        paddingTop: `0.39rem`,
         maxWidth: "36.5em",
         justifyContent: "space-between",
         alignItems: "center",

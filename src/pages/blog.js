@@ -7,7 +7,8 @@ class Blog extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.allMarkdownRemark.edges || data.allFile.edges
+    // const posttime = this.props.data.allFile.edge
 
     return (
       <Layout>
@@ -41,6 +42,7 @@ class Blog extends React.Component {
                 </small> */}
 
                 <a
+                  href={node.fields.slug}
                   style={{
                     // textAlign:`center`,
                     color: `var(--theme)`,
@@ -56,6 +58,19 @@ class Blog extends React.Component {
                   {/* 🍛 */}
                 </a>
                 <br />
+               
+                    <small
+                      style={{
+                        // textAlign:`center`,
+                        color: `var(--textNormal)`,
+                        marginTop: `0`,
+                        fontSize: `0.8rem`,
+                      }}
+                    >{node.frontmatter.date}
+                      {/* {} */}
+                      {/* {this.props.data.allFile.edges.node.birthTime} */}
+                    </small>
+                  
                 <small
                   style={{
                     // textAlign:`center`,
@@ -64,7 +79,19 @@ class Blog extends React.Component {
                     fontSize: `0.8rem`,
                   }}
                 >
-                 {node.frontmatter.date}
+                  {node.birthTime}
+                  {/* {this.props.data.allFile.edges.node.birthTime} */}
+                </small>
+                <small
+                  style={{
+                    // textAlign:`center`,
+                    color: `var(--textNormal)`,
+                    marginTop: `0`,
+                    marginLeft: `10px`,
+                    fontSize: `0.8rem`,
+                  }}
+                >
+                  {node.timeToRead} min read
                 </small>
                 <p
                   style={{
@@ -77,7 +104,7 @@ class Blog extends React.Component {
                     fontFamily: `'Quicksand',sans-serif`,
                   }}
                 >
-                 {node.frontmatter.description}
+                  {node.frontmatter.description}
                 </p>
 
                 {/* </header> */}
@@ -107,9 +134,22 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allFile(
+      filter: { extension: { eq: "md" } }
+      sort: { order: ASC, fields: birthTime }
+    ) {
       edges {
         node {
+          id
+          birthTime(fromNow: true)
+        }
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          timeToRead
           excerpt
           fields {
             slug

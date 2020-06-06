@@ -17,14 +17,14 @@ const IndexPage = () => (
 
       <footer style={{
          textAlign: `center`,
-         marginTop:`30px`,
+         marginTop:`40px`,
           bottom:`0`,
-          fontSize:`0.9em`,
-          fontFamily:`"GIlroy",sans-serif`,
-          color:`var(--tgreen)`
+          fontSize:`0.7em`,
+          fontFamily:`"Montserrat",sans-serif`,
+          color:`rgb(51, 72, 101)`
            }}
            >
-        © {new Date().getFullYear()} | Built with GatsbyJS. <br/> Designed by Sumanth.
+        © {new Date().getFullYear()} | Designed by Sumanth.
       </footer>
     </div>
   </Layout>

@@ -1,0 +1,50 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Tajawal", sans-serif;
+  margin-bottom: 12px;
+  margin-top: 52px;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Quicksand",sans-serif;
+}
+
+p {
+  line-height: 1.6em;
+  font-size: 18px;
+  color: var(--textNormal);
+  transition: "color 0.2s ease-out, background 0.2s ease-out";
+  font-family: "Gilroy",sans-serif;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.125em;
+  color: var(--h1);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--h);
+}
+
+li {
+  color: var(--textNormal);
+  line-height: 1.9em;
+  font-size: 21px;
+}
+
+@media only screen and (max-width: 700px) {
+  p,
+  li {
+    font-size: 18px;
+  }
+}
