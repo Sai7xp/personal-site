@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Tajawal&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 :root{
   --tgreen:#4AD991;
   --tblue:#8280ff;
@@ -17,10 +16,10 @@
   src: url(../styles/fonts/Apercu_Light.otf);
 }
 @font-face {
-  font-family: "Objectiv";
+  font-family: "sofia";
   font-style: normal;
   font-weight: 100;
-  src: url(../styles/fonts/Objective.ttf);
+  src: url(../styles/fonts/sofia-light.otf);
 }
 @font-face {
   font-family: "Gilroy";
@@ -52,9 +51,8 @@ body {
   /* --theme: #2E3E4D; */
   background-color: var(--bg);
   background-color: #ffffff;
-  /* background-color: #E6ECF2; */
   transition: 0.2s ease-out;
-  font-family: "Gilroy", sans-serif !important;
+  font-family: "sofia", sans-serif !important;
   /* font-family: "Quicksand", sans-serif !important; */
   font-size: 1.25rem;
 }
@@ -198,6 +196,7 @@ pre[class*="language-"] {
   /* color:var(--torange); */
   background: none;
   font-family: Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family: 'Ubuntu', sans-serif;
   /* font-family: "Inconsolata"; */
   font-feature-settings: normal;
   text-align: left;
