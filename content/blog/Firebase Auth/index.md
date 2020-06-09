@@ -1,8 +1,8 @@
 ---
-title: ✨Implementing binary search like a pro lamo 
+title: Implementing binary search like a pro lamo 
 date: "2020-08-22T13:15:03.284Z"
-description: "Server Side Rendering or SSR is a hot topic in the React community, learn about how does SSR actually works."
-imagepath: "https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2016/11/16202709/js-logo-e1479328304359.png?fit=604%2C270&ssl=1"
+description: "Server Side Rendering or SSR is a hot topic, learn about how does SSR actually works."
+imagepath: "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2020/03/Apple-Logo-Colores-1024x576.jpg"
 ---
 
 

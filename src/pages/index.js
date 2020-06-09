@@ -19,7 +19,7 @@ const IndexPage = () => (
          textAlign: `center`,
          marginTop:`40px`,
           bottom:`0`,
-          fontSize:`0.7em`,
+          fontSize:`0.75em`,
           fontFamily:`"Montserrat",sans-serif`,
           color:`rgb(51, 72, 101)`
            }}

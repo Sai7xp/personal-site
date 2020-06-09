@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Tajawal&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 :root{
   --tgreen:#4AD991;
   --tblue:#8280ff;
@@ -26,6 +25,12 @@
   font-style: normal;
   /* font-weight: 100; */
   src: url(../styles/fonts/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: "product";
+  font-style: normal;
+  /* font-weight: 100; */
+  src: url(../styles/fonts/my-font.ttf);
 }
 
 * {
@@ -157,19 +162,6 @@ body {
   }
   
 }
-
-/* @media screen and (min-width: 360px) { */
-/* .abtxt { */
-/* font-size: 1.5rem; */
-/* } */
-/* } */
-/*  */
-/* @media screen and (max-width: 550px) { */
-/* .abtxt { */
-/* font-size: 1.75rem; */
-/* } */
-/* } */
-/*  */
 @media screen and (min-width: 450px) {
 .abt-svg {
 /* display: none; */
@@ -196,8 +188,6 @@ pre[class*="language-"] {
   /* color:var(--torange); */
   background: none;
   font-family: Menlo, Monaco, source-code-pro, Courier New, monospace;
-  font-family: 'Ubuntu', sans-serif;
-  /* font-family: "Inconsolata"; */
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;

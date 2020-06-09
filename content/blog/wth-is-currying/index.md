@@ -1,8 +1,8 @@
 ---
-title: 🍛 What the heck is Currying? ft. JavaScript
+title: What the heck is Currying? ft. JavaScript
 date: "2020-03-18T13:15:03.284Z"
 description: "Currying is an essential part of Functional Programming, let's see what the heck is it."
-imagepath: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square_200x200.svg/200px-Square_200x200.svg.png"
+imagepath: "https://www.taniarascia.com/static/d46d5640598e2cbc03373885d2226c51/de03e/cookie.png"
 ---
 
 I know that you’re salivating, perhaps the dev world has become too delicious with JAMStack and now I’m talking about curry? So before you starve to death with these wonders of dev world let me introduce you to what currying is in general.
@@ -12,6 +12,7 @@ Currying was named after [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_C
 Currying is not JavaScript specific it is also a mathematical things just like `function` [ Remember good ol' f(x)? ]
 
 ```javascript
+alert('click to copy 💾');
 // Not curried
 const add = (x, y) => x + y
 

@@ -20,6 +20,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          'gatsby-remark-code-buttons',
         ],
       },
     },

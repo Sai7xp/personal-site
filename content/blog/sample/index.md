@@ -1,8 +1,8 @@
 ---
-title: 💎Let's see Quest for the Perfect Dark Mode
+title: Let's see Quest for the Perfect Dark Mode
 date: "2020-06-22T13:15:03.284Z"
 description: "We'll need some state! It's up to you how to manage state, but in this example, we'll use React context."
-imagepath: "https://i0.wp.com/s3.amazonaws.com/production-wordpress-assets/blog/wp-content/uploads/2016/11/16202709/js-logo-e1479328304359.png?fit=604%2C270&ssl=1"
+imagepath: "https://create-react-app.dev/img/logo-og.png"
 ---
 
 

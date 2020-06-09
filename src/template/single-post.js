@@ -4,7 +4,7 @@ import "./single-post.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import author from "../images/site-icon.png"
+import author from "../images/avatar.png"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -26,50 +26,48 @@ class BlogPostTemplate extends React.Component {
             margin: `0 auto`,
             padding: `${rhythm(1.56)} ${rhythm(3 / 4)}`,
             paddingTop: `0`,
-
           }}
         >
-          {/* <article> */}
-          {/* <header> */}
-          <h1 className="article-title"
+          
+          <h1
+            className="article-title"
             style={{
-              // marginTop: rhythm(1),
-              marginTop: 0,
-              fontSize: `1.6em`,
-              color: `var(--theme)`,
-              // textAlign:`center`
+              // color:`var(--theme)`,
+              marginBottom: `4px`,
+
+             
             }}
           >
             {post.frontmatter.title}
           </h1>
-          <span
+          <img
+                    src={author}
+                    alt=""
+                    width="24"
+                    height="24"
+                    style={{
+                      verticalAlign: `middle`,
+                      margin: `0`,
+                      borderRadius: `100%`,
+                      objectFit: `cover`,
+                    }}
+                  /> &nbsp;
+                  
+          <small
             style={{
-              // ...scale(-1 / 5),
-              fontSize: `12px`,
-              display: `block`,
-              // marginTop: `4px`,
-              color:"#444452",
-              marginBottom: rhythm(1),
+              // textAlign:`center`,
+              color: `var(--textNormal)`,
+              color: `#90a4ae`,
+              fontSize: `0.84rem`,
             }}
           >
-            {post.frontmatter.date}{" "}
-            <img
-              width="11"
-              style={{
-                margin: `0`,
-                marginLeft: `10px`,
-              
-              }}
-              src="https://image.flaticon.com/icons/svg/1827/1827379.svg"
-              // src={author}
-              alt=""
-            />{" "}
-            {post.timeToRead} min read
-          </span>
+           {post.timeToRead} min read ~ {post.frontmatter.date}
+          </small>
           {/* </header> */}
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
             style={{
+              marginTop: `2.2rem`,
               marginLeft: `auto`,
               marginRight: `auto`,
             }}
@@ -90,24 +88,32 @@ class BlogPostTemplate extends React.Component {
               style={{
                 display: `flex`,
                 flexWrap: `wrap`,
-                
+
                 justifyContent: `space-between`,
                 listStyle: `none`,
                 padding: 0,
               }}
             >
-              <li style={{
-                fontSize:`16px`,
-              }}>Previous<br/>
+              <li
+                style={{
+                  fontSize: `16px`,
+                }}
+              >
+                Previous
+                <br />
                 {previous && (
                   <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                    ← {previous.frontmatter.title}
                   </Link>
                 )}
               </li>
-              <li style={{
-                fontSize:`16px`,
-              }}>Next<br/>
+              <li
+                style={{
+                  fontSize: `16px`,
+                }}
+              >
+                Next
+                <br />
                 {next && (
                   <Link to={next.fields.slug} rel="next">
                     {next.frontmatter.title} →
@@ -152,6 +158,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        imagepath
       }
     }
     file(

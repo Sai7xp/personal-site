@@ -6,7 +6,7 @@ import twitter from "../images/twitter.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 const HeaderLink = styled(Link)`
-  color: #444452;
+  color: #111111;
   font-size: 15px;
   margin-right: 15px;
   font-family: "IBM Plex Mono", monospace;
@@ -15,7 +15,7 @@ const HeaderLink = styled(Link)`
   text-decoration: none;
 `
 const HeaderLink2 = styled.button`
-  color: #444452;
+  color: #000000;
   font-size: 15px;
   /* margin-right: 188px; */
   font-family: "IBM Plex Mono", monospace;

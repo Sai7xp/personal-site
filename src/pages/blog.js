@@ -15,7 +15,7 @@ class Blog extends React.Component {
         <img
           className="bg-svg2"
           style={{
-            opacity: `0.1`,
+            opacity: `0.08`,
             zIndex: `-1`,
           }}
           src={svg1}
@@ -27,68 +27,77 @@ class Blog extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <article key={node.fields.slug} style={{ marginBottom: 48 }}>
-                <a
-                  href={node.fields.slug}
+                <div
                   style={{
-                    // textAlign:`center`,
-                    color: `var(--theme)`,
-                    margin: `0`,
-                    fontSize: `1.4rem`,
-                    textRendering: `optimizeLegibility`,
-                    fontWeight: `bold`,
-                    lineHeight: `1.0`,
-                    fontFamily: `"Tajawal",sans-serif`,
+                    display: `grid`,
+                    gridTemplateColumns: `50px 2fr auto`,
+                    marginBottom: `15px`,
                   }}
                 >
-                  {title}
-                  {/* 🍛 */}
-                </a>
-                <br />
-
-                <small
-                  style={{
-                    // textAlign:`center`,
-                    color: `var(--textNormal)`,
-                    marginTop: `0`,
-                    fontSize: `0.8rem`,
-                  }}
-                >
-                  {node.frontmatter.date}
-                  {/* {} */}
-                  {/* {this.props.data.allFile.edges.node.birthTime} */}
-                </small>
-
-                <small
-                  style={{
-                    // textAlign:`center`,
-                    color: `var(--textNormal)`,
-                    marginTop: `0`,
-                    fontSize: `0.8rem`,
-                  }}
-                >
-                  {node.birthTime}
-                  {/* {this.props.data.allFile.edges.node.birthTime} */}
-                </small>
-                <small
-                  style={{
-                    // textAlign:`center`,
-                    color: `var(--textNormal)`,
-                    marginTop: `0`,
-                    marginLeft: `10px`,
-                    fontSize: `0.8rem`,
-                  }}
-                >
-                  {node.timeToRead} min read
-                </small>
+                  <img
+                    src="https://create-react-app.dev/img/logo-og.png"
+                    src={node.frontmatter.imagepath}
+                    alt=""
+                    width="40"
+                    height="40"
+                    style={{
+                      verticalAlign: `middle`,
+                      margin: `0`,
+                      borderRadius: `100%`,
+                      
+                      objectFit: `cover`,
+                    }}
+                  />
+                  <p
+                    style={{
+                      margin: `0`,
+                      lineHeight: `1.0`,
+                      // fontFamily: `"sofia", sans-serif`,
+                      fontSize: `1.2rem`,
+                    }}
+                  >
+                    <a
+                      href={node.fields.slug}
+                      style={{
+                        // textAlign:`center`,
+                        color: `#24292e`,
+                        color: `var(--theme)`,
+                        margin: `0`,
+                        fontSize: `1.4rem`,
+                        textRendering: `optimizeLegibility`,
+                        fontWeight: `bold`,
+                        lineHeight: `1.0`,
+                        fontFamily: `"Tajawal",sans-serif`,
+                      }}
+                    >
+                      {title}
+                     
+                    </a>
+                    <br />{" "}
+                    <small
+                      style={{
+                        // textAlign:`center`,
+                        color: `var(--textNormal)`,
+                        color: `#90a4ae`,
+                        marginTop: `0`,
+                        fontSize: `0.75rem`,
+                      }}
+                    >
+                      {node.frontmatter.date} ~ {node.timeToRead} min read
+                    </small>
+                  </p>
+                </div>
                 <p
                   style={{
                     // textAlign:`center`,
                     color: `var(--secondaryText)`,
-                    // marginTop: `8px`,
+                    color: `#454545`,
+                    marginTop: `0px`,
                     // marginBottom: `8px`,
-                    fontSize: `1rem`,
+                    fontSize: `0.8em`,
                     lineHeight: `1.3`,
-                    fontFamily: `'Quicksand',sans-serif`,
+                    maxWidth:`650px`
+                    // fontFamily: `'Quicksand',sans-serif`,
                   }}
                 >
                   {node.frontmatter.description}
@@ -135,6 +144,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            imagepath
           }
         }
       }

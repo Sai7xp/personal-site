@@ -1,11 +1,10 @@
 .hello {
   text-decoration: none;
   font-size: 1.10rem;
-  font-family: "Montserrat",sans-serif;
-  border-radius: 4px;
+  border-radius: 5px;
   margin-right: 10px;
   float: right;
-  padding: 01.4px 14px;
+  padding: 1.8px 14px;
   box-shadow: 0 3px 20px rgba(66, 66, 66, 0.2);
   /* color:rgb(121, 150, 245) ; */
   color: #f5f5f5;

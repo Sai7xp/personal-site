@@ -13,16 +13,17 @@ const articlesList = () => {
           color: `#444452`,
           color: `var(--theme)`,
           fontSize: `18px`,
+          textTransform:`uppercase`
+          
         }}
       >
-        <span>LATEST ARTICLES</span>
+        <span>Latest Articles</span>
       </h4>
 
       <div
         style={{
           display: `grid`,
           gridTemplateColumns: `40px 2fr auto`,
-          alignItems: `center`,
           marginBottom: `30px`,
         }}
       >
@@ -47,7 +48,7 @@ const articlesList = () => {
             fontSize: `1.2rem`,
           }}
         >
-          How to implement chat feature  <br />{" "}
+          How to implement chat feature in flutter like a pro  <br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -65,7 +66,7 @@ const articlesList = () => {
         style={{
           display: `grid`,
           gridTemplateColumns: `40px 2fr auto`,
-          alignItems: `center`,
+          
           marginBottom: `30px`,
         }}
       >
@@ -90,7 +91,7 @@ const articlesList = () => {
             fontSize: `1.2rem`,
           }}
         >
-          Implement dark mode like a pro <br />{" "}
+          Implement dark mode like a pro in Gatsby Js and react <br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -108,7 +109,7 @@ const articlesList = () => {
         style={{
           display: `grid`,
           gridTemplateColumns: `40px 2fr auto`,
-          alignItems: `center`,
+          
           marginBottom: `30px`,
         }}
       >
@@ -133,7 +134,7 @@ const articlesList = () => {
             fontSize: `1.2rem`,
           }}
         >
-          Implement firebase auth sign-in <br />{" "}
+          Implement firebase auth sign-in with splash screen <br />{" "}
           <small
             style={{
               // textAlign:`center`,
