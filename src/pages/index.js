@@ -20,7 +20,8 @@ const IndexPage = () => (
          marginTop:`40px`,
           bottom:`0`,
           fontSize:`0.75em`,
-          fontFamily:`"Montserrat",sans-serif`,
+          letterSpacing:`0.5px`,
+          // fontFamily:`"Montserrat",sans-serif`,
           color:`rgb(51, 72, 101)`
            }}
            >

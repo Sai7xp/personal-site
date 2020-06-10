@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Tajawal&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
-:root{
-  --tgreen:#4AD991;
-  --tblue:#8280ff;
-  --tred:#ff7285;
-  --torange:#FFC483;
+:root {
+  --tgreen: #4ad991;
+  --tblue: #8280ff;
+  --tred: #ff7285;
+  --torange: #ffc483;
 }
 
 @font-face {
@@ -140,18 +140,17 @@ body {
     top: 0px;
     width: 37%;
   }
-  
 }
 @media screen and (min-width: 450px) {
-.abt-svg {
-/* display: none; */
-width: 20%;
-margin-right: 250px;
-margin-top: 5px;
-}
-.bg-svg2{
-  opacity: 0.05;
-}
+  .abt-svg {
+    /* display: none; */
+    width: 20%;
+    margin-right: 250px;
+    margin-top: 5px;
+  }
+  .bg-svg2 {
+    opacity: 0.05;
+  }
 }
 
 a {
@@ -159,7 +158,19 @@ a {
   text-decoration: none;
 }
 
-
+.tech {
+  content: "▹";
+  /* position: absolute; */
+  left: 0px;
+  color: rgb(100, 255, 218);
+  font-size: 18px;
+  line-height: 12px;
+}
+.tech>li{
+  /* list-style: none; */
+  color:var(--theme);
+  /* color:#90a4ae; */
+}
 /* code imported from yash gupthaz starter */
 
 code[class*="language-"],

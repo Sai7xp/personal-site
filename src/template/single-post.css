@@ -19,7 +19,7 @@ body {
 p {
   line-height: 1.5em;
   font-size: 16px;
-  letter-spacing: 0.08px;
+  letter-spacing: 0.13px;
   color: var(--textNormal);
   /* color: #444452; */
   /* color: #383838; */
@@ -27,7 +27,7 @@ p {
   color: #3c4043;
   /* color: var(--secondaryText); */
   transition: "color 0.2s ease-out, background 0.2s ease-out";
- font-family: "sofia",sans-serif;
+ font-family: "sans",sans-serif;
 }
 
 h1 {

@@ -7,18 +7,22 @@ const articlesList = () => {
         className=".article-head"
         style={{
           fontFamily: `"Inter", sans-serif`,
+          
           margin: `0`,
           display: `flex`,
           marginBottom: `15px`,
           color: `#444452`,
-          color: `var(--theme)`,
+          // color: `var(--theme)`,
           fontSize: `18px`,
           textTransform: `uppercase`,
         }}
       >
-        <span>Latest Articles</span>
+        {/* <span>Latest Articles</span> */}
       </h4>
-
+      <p style={{
+        fontSize:"18px",
+        // color:`var(--theme)`
+      }}>01. Recent Articles:</p>
       <div
         style={{
           display: `grid`,
@@ -44,6 +48,7 @@ const articlesList = () => {
             // display:`inline`
             margin: `0`,
             lineHeight: `1.2`,
+             color:`var(--theme)`,
             fontSize: `1.2rem`,
           }}
         >
@@ -86,6 +91,7 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
+            color:`var(--theme)`,
             lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
@@ -129,6 +135,7 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
+            color:`var(--theme)`,
             lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
@@ -206,18 +213,27 @@ const articlesList = () => {
           textTransform: `uppercase`,
         }}
       >
-        <span>Browser Extensions</span>
+        
       </h4>
-      <ul>
-        <li>
-          Chrome, Chrome Canary (<strong>my default browser</strong>)
-        </li>
-        <li>Opera</li>
-        <li>Mozilla Firefox, Mozilla Firefox Nighly,</li>
-        <li>
-          Safari, Safari Technology Preview &amp; Nightly (SW is supported 😬).
-        </li>
+      <p style={{
+        fontSize:"18px",
+        // color:`var(--theme)`
+      }}>02. Technologies I've been working with recently:</p>
+      <ul style={{
+        display:`grid`,
+        marginLeft:`50px`,
+        gridTemplateColumns: `repeat(2, minmax(140px, 200px))`,
+        
+
+      }} className="tech">
+        <li>Flutter</li>
+        <li>Gatsby Js</li>
+        <li>MERN Stack</li>
+        <li>React</li>
+        <li>Javascript</li>
+        <li>Figma (ui design)</li>
       </ul>
+      
     </div>
   )
 }
