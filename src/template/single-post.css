@@ -27,7 +27,7 @@ p {
   color: #3c4043;
   /* color: var(--secondaryText); */
   transition: "color 0.2s ease-out, background 0.2s ease-out";
-  /* font-family: "sofia",sans-serif; */
+ font-family: "sofia",sans-serif;
 }
 
 h1 {
