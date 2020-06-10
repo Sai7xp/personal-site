@@ -26,12 +26,12 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <article key={node.fields.slug} style={{ marginBottom: 48 }}>
+              <article key={node.fields.slug} style={{ marginBottom: `40px` }}>
                 <div
                   style={{
                     display: `grid`,
                     gridTemplateColumns: `50px 2fr auto`,
-                    marginBottom: `15px`,
+                    marginBottom: `10px`,
                   }}
                 >
                   <img
@@ -44,7 +44,7 @@ class Blog extends React.Component {
                       verticalAlign: `middle`,
                       margin: `0`,
                       borderRadius: `100%`,
-                      
+
                       objectFit: `cover`,
                     }}
                   />
@@ -59,19 +59,15 @@ class Blog extends React.Component {
                     <a
                       href={node.fields.slug}
                       style={{
-                        // textAlign:`center`,
                         color: `#24292e`,
-                        color: `var(--theme)`,
+                        color: `#5183f5`,
                         margin: `0`,
-                        fontSize: `1.4rem`,
+                        fontSize: `1.25rem`,
                         textRendering: `optimizeLegibility`,
-                        fontWeight: `bold`,
                         lineHeight: `1.0`,
-                        fontFamily: `"Tajawal",sans-serif`,
                       }}
                     >
                       {title}
-                     
                     </a>
                     <br />{" "}
                     <small
@@ -79,7 +75,6 @@ class Blog extends React.Component {
                         // textAlign:`center`,
                         color: `var(--textNormal)`,
                         color: `#90a4ae`,
-                        marginTop: `0`,
                         fontSize: `0.75rem`,
                       }}
                     >
@@ -92,12 +87,12 @@ class Blog extends React.Component {
                     // textAlign:`center`,
                     color: `var(--secondaryText)`,
                     color: `#454545`,
+                    color: `#6f6f6f`,
                     marginTop: `0px`,
-                    // marginBottom: `8px`,
-                    fontSize: `0.8em`,
+                    //  marginBottom:`0px`,
+                    fontSize: `0.9rem`,
+
                     lineHeight: `1.3`,
-                    maxWidth:`650px`
-                    // fontFamily: `'Quicksand',sans-serif`,
                   }}
                 >
                   {node.frontmatter.description}

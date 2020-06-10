@@ -7,9 +7,10 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 const HeaderLink = styled(Link)`
   color: #111111;
-  font-size: 15px;
+  font-size: 14px;
   margin-right: 15px;
   font-family: "IBM Plex Mono", monospace;
+  /* font-family: "sans", sans-serif; */
   text-transform: uppercase;
   font-weight: 400;
   text-decoration: none;

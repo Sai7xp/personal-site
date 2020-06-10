@@ -5,7 +5,7 @@ import svg1 from "../images/site-icon.png"
 import svg from "../images/SVG/2.svg"
 import SEO from "../components/seo"
 const AboutDesc = styled.h2`
-  font-family: "Quicksand", sans-serif;
+  /* font-family: "Quicksand", sans-serif; */
   font-weight: 300;
   line-height: 1.45;
   max-width: 560px;

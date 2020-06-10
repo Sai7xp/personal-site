@@ -13,8 +13,7 @@ const articlesList = () => {
           color: `#444452`,
           color: `var(--theme)`,
           fontSize: `18px`,
-          textTransform:`uppercase`
-          
+          textTransform: `uppercase`,
         }}
       >
         <span>Latest Articles</span>
@@ -44,11 +43,11 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
-            lineHeight: `1.0`,
+            lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
         >
-          How to implement chat feature in flutter like a pro  <br />{" "}
+          How to implement chat feature in flutter like a pro <br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -66,7 +65,7 @@ const articlesList = () => {
         style={{
           display: `grid`,
           gridTemplateColumns: `40px 2fr auto`,
-          
+
           marginBottom: `30px`,
         }}
       >
@@ -87,7 +86,7 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
-            lineHeight: `1.0`,
+            lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
         >
@@ -109,7 +108,7 @@ const articlesList = () => {
         style={{
           display: `grid`,
           gridTemplateColumns: `40px 2fr auto`,
-          
+
           marginBottom: `30px`,
         }}
       >
@@ -130,7 +129,7 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
-            lineHeight: `1.0`,
+            lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
         >
@@ -149,12 +148,12 @@ const articlesList = () => {
         </p>
       </div>
 
-      <button
+      {/* <button
         style={{
           border: `1px solid #F7B801`,
           borderRadius: `8px`,
           padding: `4px 10px`,
-          // margin:`0 auto`
+          margin:`0 auto`,
 
           fontSize: `12px`,
           backgroundColor: `#FFF7DD`,
@@ -192,7 +191,33 @@ const articlesList = () => {
         }}
       >
         #gatsbyjs
-      </button>
+      </button> */}
+
+      <h4
+        className=".article-head"
+        style={{
+          fontFamily: `"Inter", sans-serif`,
+          margin: `0`,
+          display: `flex`,
+          marginBottom: `15px`,
+          color: `#444452`,
+          color: `var(--theme)`,
+          fontSize: `18px`,
+          textTransform: `uppercase`,
+        }}
+      >
+        <span>Browser Extensions</span>
+      </h4>
+      <ul>
+        <li>
+          Chrome, Chrome Canary (<strong>my default browser</strong>)
+        </li>
+        <li>Opera</li>
+        <li>Mozilla Firefox, Mozilla Firefox Nighly,</li>
+        <li>
+          Safari, Safari Technology Preview &amp; Nightly (SW is supported 😬).
+        </li>
+      </ul>
     </div>
   )
 }

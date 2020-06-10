@@ -4,9 +4,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "sofia", sans-serif;
+  font-family: "sans", sans-serif;
   margin-bottom: 12px;
-  font-size: 500;
+  font-weight: 500;
   font-size: 1em;
   color:var(--theme);
 }
@@ -18,11 +18,12 @@ body {
 
 p {
   line-height: 1.5em;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--textNormal);
-  color: #444452;
-  color: #383838;
-  color: #24292e;
+  /* color: #444452; */
+  /* color: #383838; */
+  /* color: #24292e; */
+  color: #3c4043;
   /* color: var(--secondaryText); */
   transition: "color 0.2s ease-out, background 0.2s ease-out";
   /* font-family: "Gilroy",sans-serif; */
@@ -32,7 +33,7 @@ h1 {
   font-size: 1.4em;
   /* line-height: 1.125em; */
   color: var(--h1);
-  color: #383838;
+  color: #3c4043;
 }
 
 h2,
@@ -55,7 +56,7 @@ li {
 @media only screen and (max-width: 700px) {
   p,
   li {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 600px) {

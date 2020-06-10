@@ -34,8 +34,7 @@ class BlogPostTemplate extends React.Component {
             style={{
               // color:`var(--theme)`,
               marginBottom: `4px`,
-
-             
+              // fontFamily: `"SAns",sans-serif`,
             }}
           >
             {post.frontmatter.title}
@@ -58,6 +57,7 @@ class BlogPostTemplate extends React.Component {
               // textAlign:`center`,
               color: `var(--textNormal)`,
               color: `#90a4ae`,
+              // color: `#6f6f6f`,
               fontSize: `0.84rem`,
             }}
           >
