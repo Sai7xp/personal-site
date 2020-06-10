@@ -33,6 +33,7 @@ class BlogPostTemplate extends React.Component {
             style={{
               // color:`var(--theme)`,
               marginBottom: `4px`,
+              fontWeight:`bold`,
               // fontFamily: `"Sans",sans-serif`,
             }}
           >
