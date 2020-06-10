@@ -31,9 +31,9 @@ class BlogPostTemplate extends React.Component {
           <h1
             className="article-title"
             style={{
-              color:`var(--secondaryLinks)`,
+              color:`var(--theme)`,
               marginBottom: `4px`,
-              // fontFamily: `"SAns",sans-serif`,
+              // fontFamily: `"Sans",sans-serif`,
             }}
           >
             {post.frontmatter.title}
