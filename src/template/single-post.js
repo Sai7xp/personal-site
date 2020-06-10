@@ -76,7 +76,7 @@ class BlogPostTemplate extends React.Component {
               objectFit: `cover`,
             }}
           /></a>
-          <a href="https://wa.me/9642183590/?text=Nice, article dude. Let's work together">
+          <a href="https://wa.me/919642183590/?text=Nice, article dude. Let's work together">
           <img
             src="https://image.flaticon.com/icons/svg/1384/1384095.svg"
             alt=""
