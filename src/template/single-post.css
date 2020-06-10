@@ -19,6 +19,7 @@ body {
 p {
   line-height: 1.5em;
   font-size: 16px;
+  letter-spacing: 0.08px;
   color: var(--textNormal);
   /* color: #444452; */
   /* color: #383838; */
@@ -26,7 +27,7 @@ p {
   color: #3c4043;
   /* color: var(--secondaryText); */
   transition: "color 0.2s ease-out, background 0.2s ease-out";
-  /* font-family: "Gilroy",sans-serif; */
+  /* font-family: "sofia",sans-serif; */
 }
 
 h1 {
@@ -66,6 +67,6 @@ li {
 }
 @media only screen and (max-width: 400px) {
   .article-title{
-font-size: 22px;
+font-size: 23px;
   }
 }

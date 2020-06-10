@@ -52,20 +52,19 @@ const Header = ({ siteTitle }) => (
         margin: "0 auto",
       }}
     >
-      {/* <h2 style={{ margin: 0 }}> */}
+      
         <HeaderLink to="/" activeStyle={{ color: `var(--tblue)` }}>
           Home
         </HeaderLink>
         <HeaderLink to="/blog" activeStyle={{ color: `var(--tblue)`,  }}>
-        {/* <AniLink paintDrip to="/blog"> */}
+        
           Articles
-          {/* </AniLink> */}
+          
         </HeaderLink>
         <HeaderLink to="/about" activeStyle={{ color: `var(--tblue)` }}>
           About
         </HeaderLink>
-        {/* <HeaderLink2 onClick={() => scrollTo("#test-id")}>About</HeaderLink2> */}
-      {/* </h2> */}
+       
       <div
         style={{
           float: `right`,

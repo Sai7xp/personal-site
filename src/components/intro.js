@@ -44,13 +44,14 @@ const Intro = () => {
         />
         <SocialLinks />
       </div>
-      <Fade big>
+      
         <div
           style={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             margin: "0 auto",
+            
             lineHeight: `31px`,
           }}
         >
@@ -68,13 +69,17 @@ const Intro = () => {
           >
             Sai Sumanth
           </h1>
-          <p align="center">
-            Teenager who code. <br />
+          <p align="center" style={{
+            fontSize:`18px`,
+            // color: "#737373  ",
+            // fontWeight:`300`
+          }} >
+            <br />
             Gatsby Js Fanboy.
             <br />
             <ul>
               <li className="hello1">
-                <a className="hello" href="https://www.github.com/Mr404Found">
+                <a className="hello" href="https://wa.me/9642183590/?text=Hi I've a project">
                   Say Hello!
                 </a>
                 {/* <a href="mailto:saisumanth2303@gmail.com">Say Hi!</a> */}
@@ -82,7 +87,7 @@ const Intro = () => {
             </ul>
           </p>
         </div>
-      </Fade>
+    
     </div>
   )
 }

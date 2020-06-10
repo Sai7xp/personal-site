@@ -28,11 +28,10 @@ class BlogPostTemplate extends React.Component {
             paddingTop: `0`,
           }}
         >
-          
           <h1
             className="article-title"
             style={{
-              // color:`var(--theme)`,
+              color:`var(--secondaryLinks)`,
               marginBottom: `4px`,
               // fontFamily: `"SAns",sans-serif`,
             }}
@@ -40,29 +39,56 @@ class BlogPostTemplate extends React.Component {
             {post.frontmatter.title}
           </h1>
           <img
-                    src={author}
-                    alt=""
-                    width="24"
-                    height="24"
-                    style={{
-                      verticalAlign: `middle`,
-                      margin: `0`,
-                      borderRadius: `100%`,
-                      objectFit: `cover`,
-                    }}
-                  /> &nbsp;
-                  
+            src={post.frontmatter.author}
+            alt=""
+            width="24"
+            height="24"
+            style={{
+              verticalAlign: `middle`,
+              margin: `0`,
+              borderRadius: `100%`,
+              objectFit: `cover`,
+            }}
+          />{" "}
+          &nbsp;
           <small
             style={{
-              // textAlign:`center`,
+             
               color: `var(--textNormal)`,
               color: `#90a4ae`,
-              // color: `#6f6f6f`,
+              
               fontSize: `0.84rem`,
             }}
           >
-           {post.timeToRead} min read ~ {post.frontmatter.date}
+            {post.timeToRead} min read ~ {post.frontmatter.date}
           </small>
+          &nbsp;
+          <a href="https://twitter.com/MovingMelody">
+          <img
+            src="https://image.flaticon.com/icons/svg/733/733635.svg"
+            alt=""
+            width="16"
+            height="16"
+            style={{
+              verticalAlign: `middle`,
+              margin: `0`,
+              opacity:`0.6`,
+              objectFit: `cover`,
+            }}
+          /></a>
+          <a href="https://wa.me/9642183590/?text=Nice, article dude. Let's work together">
+          <img
+            src="https://image.flaticon.com/icons/svg/1384/1384095.svg"
+            alt=""
+            width="14"
+            height="14"
+            style={{
+              verticalAlign: `middle`,
+              margin:`0`,
+              marginLeft: `10px`,
+              opacity:`0.6`,
+            }}
+          /></a>
           {/* </header> */}
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -72,6 +98,7 @@ class BlogPostTemplate extends React.Component {
               marginRight: `auto`,
             }}
           />
+          
           <div
             style={{
               marginBottom: rhythm(1),
@@ -82,8 +109,52 @@ class BlogPostTemplate extends React.Component {
             }}
           />
           {/* </article> */}
+          <h2>Tags:</h2>
+          <button
+        style={{
+          border: `1px solid #F7B801`,
+          borderRadius: `8px`,
+          padding: `4px 10px`,
+          margin:`0 auto`,
 
-          <nav>
+          fontSize: `12px`,
+          backgroundColor: `#FFF7DD`,
+          backgroundColor: `transparent`,
+          color: `#F7B801`,
+        }}
+      >
+        #javascript
+      </button>
+      <button
+        style={{
+          border: `1px solid #4ad991`,
+          borderRadius: `8px`,
+          padding: `4px 10px`,
+          // margin:`0 auto`
+          marginLeft: `15px`,
+          fontSize: `12px`,
+          backgroundColor: `#daf7eb`,
+          backgroundColor: `transparent`,
+          color: `#4ad991`,
+        }}
+      >
+        #flutter
+      </button>
+      <button
+        style={{
+          border: `1px solid #8280ff`,
+          borderRadius: `8px`,
+          padding: `4px 10px`,
+          marginLeft: `15px`,
+          fontSize: `12px`,
+          backgroundColor: `#ebe7ff`,
+          backgroundColor: `transparent`,
+          color: `#8280ff`,
+        }}
+      >
+        #gatsbyjs
+      </button>
+          <nav style={{marginTop:`15px`}}>
             <ul
               style={{
                 display: `flex`,
@@ -159,6 +230,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         imagepath
+        author
       }
     }
     file(

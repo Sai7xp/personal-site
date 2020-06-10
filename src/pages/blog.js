@@ -26,12 +26,13 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <article key={node.fields.slug} style={{ marginBottom: `40px` }}>
+              <article key={node.fields.slug} style={{ marginBottom: `40px`}}>
                 <div
                   style={{
                     display: `grid`,
                     gridTemplateColumns: `50px 2fr auto`,
                     marginBottom: `10px`,
+                    
                   }}
                 >
                   <img
@@ -44,7 +45,7 @@ class Blog extends React.Component {
                       verticalAlign: `middle`,
                       margin: `0`,
                       borderRadius: `100%`,
-
+                      
                       objectFit: `cover`,
                     }}
                   />
@@ -59,17 +60,21 @@ class Blog extends React.Component {
                     <a
                       href={node.fields.slug}
                       style={{
-                        color: `#24292e`,
-                        color: `#5183f5`,
+                        
+                        color: `var(--theme)`,
+                        // color: `#5183f5`,
                         margin: `0`,
-                        fontSize: `1.25rem`,
+                        fontSize: `1.22rem`,
                         textRendering: `optimizeLegibility`,
                         lineHeight: `1.0`,
+                        
                       }}
                     >
                       {title}
+                     
                     </a>
                     <br />{" "}
+                    
                     <small
                       style={{
                         // textAlign:`center`,
@@ -81,6 +86,7 @@ class Blog extends React.Component {
                       {node.frontmatter.date} ~ {node.timeToRead} min read
                     </small>
                   </p>
+                  
                 </div>
                 <p
                   style={{
@@ -89,14 +95,16 @@ class Blog extends React.Component {
                     color: `#454545`,
                     color: `#6f6f6f`,
                     marginTop: `0px`,
-                    //  marginBottom:`0px`,
+                  //  marginBottom:`0px`,
                     fontSize: `0.9rem`,
-
+                    
                     lineHeight: `1.3`,
+                    
                   }}
                 >
                   {node.frontmatter.description}
                 </p>
+                
               </article>
             )
           })}

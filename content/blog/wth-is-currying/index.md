@@ -3,6 +3,7 @@ title: What the heck is Currying? ft. JavaScript
 date: "2020-03-18T13:15:03.284Z"
 description: "Currying is an essential part of Functional Programming, let's see what the heck is it."
 imagepath: "https://www.taniarascia.com/static/d46d5640598e2cbc03373885d2226c51/de03e/cookie.png"
+author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 
 I know that you’re salivating, perhaps the dev world has become too delicious with JAMStack and now I’m talking about curry? So before you starve to death with these wonders of dev world let me introduce you to what currying is in general.
@@ -22,6 +23,8 @@ const addFive = add(5)
 addFive(6) // 11
 ```
 ![alt text](https://zocada.com/wp-content/uploads/2019/01/gatsby_blog-740x370.png "Logo Title Text 1")
+
+- Subtitle or Short Description Goes Here
 
 As you can see using Currying we were able to have functions that are more definite in what they do, this in turn greatly simplifies our code.
 

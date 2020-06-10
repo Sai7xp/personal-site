@@ -3,6 +3,7 @@ title: Quality Server-Side Rendering with React
 date: "2019-12-22T13:15:03.284Z"
 description: "Server Side Rendering or SSR is a hot topic in the React community, learn about how does SSR actually works."
 imagepath: "https://miro.medium.com/max/785/1*H-25KB7EbSHjv70HXrdl6w.png"
+author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 
 Server-side rendering is a term that we often hear in the react world, there are a lot of frameworks that help us with server-side rendering like Next.js and Gatsby. Server-side rendering can add various additional improvements to our application but at the same time complicate things even more. There are situations where it is useful and other situations where it can cause trouble.

@@ -3,6 +3,7 @@ title: Implementing binary search like a pro lamo
 date: "2020-08-22T13:15:03.284Z"
 description: "Server Side Rendering or SSR is a hot topic, learn about how does SSR actually works."
 imagepath: "https://lamanzanamordida.net/app/uploads-lamanzanamordida.net/2020/03/Apple-Logo-Colores-1024x576.jpg"
+author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 
 

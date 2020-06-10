@@ -3,6 +3,7 @@ title: Let's see Quest for the Perfect Dark Mode
 date: "2020-06-22T13:15:03.284Z"
 description: "We'll need some state! It's up to you how to manage state, but in this example, we'll use React context."
 imagepath: "https://create-react-app.dev/img/logo-og.png"
+author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 
 
