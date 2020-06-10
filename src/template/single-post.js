@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
           <h1
             className="article-title"
             style={{
-              color:`var(--theme)`,
+            //  color:`var(--theme)`,
               marginBottom: `4px`,
              // fontWeight:`bold`,
               // fontFamily: `"Sans",sans-serif`,
