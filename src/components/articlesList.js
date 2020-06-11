@@ -216,7 +216,7 @@ const articlesList = () => {
         
       </h4>
       <p style={{
-        fontSize:"18px",
+        fontSize:"20px",
         // color:`var(--theme)`
       }}>02. Technologies I work with:</p>
       <ul style={{
