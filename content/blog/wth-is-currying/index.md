@@ -1,11 +1,13 @@
 ---
 title: What the heck is Currying? ft. JavaScript
-date: "2020-03-18T13:15:03.284Z"
-description: "Currying is an essential part of Functional Programming, let's see what the heck is it."
-imagepath: "https://www.taniarascia.com/static/d46d5640598e2cbc03373885d2226c51/de03e/cookie.png"
+date: "2020-05-18T13:15:03.284Z"
+description: "Currying is an essential part of Functional Progr-amming, let's see what the heck is it."
+imagepath: "https://miro.medium.com/max/785/1*H-25KB7EbSHjv70HXrdl6w.png"
 author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 
+This sample md file taken from @yashguptaz blog
+  
 I know that you’re salivating, perhaps the dev world has become too delicious with JAMStack and now I’m talking about curry? So before you starve to death with these wonders of dev world let me introduce you to what currying is in general.
 
 Currying was named after [Haskell Curry](https://en.wikipedia.org/wiki/Haskell_Curry), what currying essentially means is taking a function which takes multiple parameter and converting it in to a function which only takes one parameter and returns a functions which then takes the next parameter.

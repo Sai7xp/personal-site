@@ -73,7 +73,7 @@ const Intro = () => {
             fontSize:`18px`,
             // color: "#737373  ",
             // fontWeight:`300`
-          }}> I Love Firebase.
+          }}> Teenager who code
             <br />
             Gatsby Js Fanboy.
             <br />

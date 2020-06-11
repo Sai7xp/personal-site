@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 const articlesList = () => {
   return (
-    <div style={{ marginTop: `40px` }}>
+    <div style={{ marginTop: `40px`, fontFamily:`"sans",sans-serif` }}>
       <h4
         className=".article-head"
         style={{
@@ -12,7 +12,6 @@ const articlesList = () => {
           display: `flex`,
           marginBottom: `15px`,
           color: `#444452`,
-          // color: `var(--theme)`,
           fontSize: `18px`,
           textTransform: `uppercase`,
         }}
@@ -20,9 +19,9 @@ const articlesList = () => {
         {/* <span>Latest Articles</span> */}
       </h4>
       <p style={{
-        fontSize:"18px",
-        // color:`var(--theme)`
-      }}>01. Recent Articles:</p>
+        fontSize:"20px",
+        
+      }}>01. Recent Articles</p>
       <div
         style={{
           display: `grid`,
@@ -51,8 +50,8 @@ const articlesList = () => {
              color:`var(--theme)`,
             fontSize: `1.2rem`,
           }}
-        >
-          How to implement chat feature in flutter like a pro <br />{" "}
+        ><a href="https://sumanth.netlify.app/quality-ssr-with-react/">
+          Quality Server-Side Rendering with React </a><br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -96,7 +95,7 @@ const articlesList = () => {
             fontSize: `1.2rem`,
           }}
         >
-          Implement dark mode like a pro in Gatsby Js and react <br />{" "}
+          Implement dark mode like a pro in Gatsby<br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -140,7 +139,8 @@ const articlesList = () => {
             fontSize: `1.2rem`,
           }}
         >
-          Implement firebase auth sign-in with splash screen <br />{" "}
+        <a href="https://sumanth.netlify.app/wth-is-currying/">
+          What the heck is Currying? ft. JavaScript</a> <br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -218,7 +218,7 @@ const articlesList = () => {
       <p style={{
         fontSize:"18px",
         // color:`var(--theme)`
-      }}>02. Technologies I've been working with recently:</p>
+      }}>02. Technologies I work with:</p>
       <ul style={{
         display:`grid`,
         marginLeft:`50px`,
@@ -231,7 +231,7 @@ const articlesList = () => {
         <li>MERN Stack</li>
         <li>React</li>
         <li>Javascript</li>
-        <li>Figma (ui design)</li>
+        <li>Figma </li>
       </ul>
       
     </div>
@@ -239,3 +239,42 @@ const articlesList = () => {
 }
 
 export default articlesList
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allFile(
+      filter: { extension: { eq: "md" } }
+      sort: { order: ASC, fields: birthTime }
+    ) {
+      edges {
+        node {
+          id
+          birthTime(fromNow: true)
+        }
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          timeToRead
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            imagepath
+          }
+        }
+      }
+    }
+  }
+`

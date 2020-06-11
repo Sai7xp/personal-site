@@ -1,8 +1,8 @@
 ---
 title: Quality Server-Side Rendering with React 
 date: "2019-12-22T13:15:03.284Z"
-description: "Server Side Rendering or SSR is a hot topic in the React community, learn about how does SSR actually works."
-imagepath: "https://miro.medium.com/max/785/1*H-25KB7EbSHjv70HXrdl6w.png"
+description: "Server Side Rendering or SSR is a hot topic in the React community, how does SSR actually works."
+imagepath: "https://create-react-app.dev/img/logo-og.png"
 author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 

@@ -14,13 +14,12 @@ const IndexPage = () => (
       <div style={{ marginTop: `78px` }}></div>
       <Intro />
       <Articles />
-
       <footer style={{
          textAlign: `center`,
          marginTop:`40px`,
           bottom:`0`,
           fontSize:`0.75em`,
-          letterSpacing:`0.5px`,
+          letterSpacing:`0.25px`,
           // fontFamily:`"Montserrat",sans-serif`,
           color:`rgb(51, 72, 101)`
            }}

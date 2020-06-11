@@ -8,7 +8,7 @@ import author from "../images/avatar.png"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const summu = this.props.data.file.birthTime
+    // const summu = this.props.data.file.birthTime
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
@@ -22,19 +22,17 @@ class BlogPostTemplate extends React.Component {
         </Layout>
         <div
           style={{
-            maxWidth: `800px`,
+            maxWidth: `780px`,
             margin: `0 auto`,
             padding: `${rhythm(1.56)} ${rhythm(3 / 4)}`,
             paddingTop: `0`,
           }}
         >
           <h1
-            className="article-title"
+            className="artitle"
             style={{
-            //  color:`var(--theme)`,
               marginBottom: `4px`,
-             // fontWeight:`bold`,
-              // fontFamily: `"Sans",sans-serif`,
+              // color:`var(--theme)`
             }}
           >
             {post.frontmatter.title}
@@ -54,10 +52,7 @@ class BlogPostTemplate extends React.Component {
           &nbsp;
           <small
             style={{
-             
-              color: `var(--textNormal)`,
               color: `#90a4ae`,
-              
               fontSize: `0.84rem`,
             }}
           >
@@ -65,31 +60,33 @@ class BlogPostTemplate extends React.Component {
           </small>
           &nbsp;
           <a href="https://twitter.com/MovingMelody">
-          <img
-            src="https://image.flaticon.com/icons/svg/733/733635.svg"
-            alt=""
-            width="16"
-            height="16"
-            style={{
-              verticalAlign: `middle`,
-              margin: `0`,
-              opacity:`0.6`,
-              objectFit: `cover`,
-            }}
-          /></a>
+            <img
+              src="https://image.flaticon.com/icons/svg/733/733635.svg"
+              alt=""
+              width="16"
+              height="16"
+              style={{
+                verticalAlign: `middle`,
+                margin: `0`,
+                opacity: `0.6`,
+                objectFit: `cover`,
+              }}
+            />
+          </a>
           <a href="https://wa.me/919642183590/?text=Nice, article dude. Let's work together">
-          <img
-            src="https://image.flaticon.com/icons/svg/1384/1384095.svg"
-            alt=""
-            width="14"
-            height="14"
-            style={{
-              verticalAlign: `middle`,
-              margin:`0`,
-              marginLeft: `10px`,
-              opacity:`0.6`,
-            }}
-          /></a>
+            <img
+              src="https://image.flaticon.com/icons/svg/1384/1384095.svg"
+              alt=""
+              width="14"
+              height="14"
+              style={{
+                verticalAlign: `middle`,
+                margin: `0`,
+                marginLeft: `10px`,
+                opacity: `0.6`,
+              }}
+            />
+          </a>
           {/* </header> */}
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
@@ -99,7 +96,6 @@ class BlogPostTemplate extends React.Component {
               marginRight: `auto`,
             }}
           />
-          
           <div
             style={{
               marginBottom: rhythm(1),
@@ -112,50 +108,50 @@ class BlogPostTemplate extends React.Component {
           {/* </article> */}
           <h2>Tags:</h2>
           <button
-        style={{
-          border: `1px solid #F7B801`,
-          borderRadius: `8px`,
-          padding: `4px 10px`,
-          margin:`0 auto`,
+            style={{
+              border: `1px solid #F7B801`,
+              borderRadius: `8px`,
+              padding: `4px 10px`,
+              margin: `0 auto`,
 
-          fontSize: `12px`,
-          backgroundColor: `#FFF7DD`,
-          backgroundColor: `transparent`,
-          color: `#F7B801`,
-        }}
-      >
-        #javascript
-      </button>
-      <button
-        style={{
-          border: `1px solid #4ad991`,
-          borderRadius: `8px`,
-          padding: `4px 10px`,
-          // margin:`0 auto`
-          marginLeft: `15px`,
-          fontSize: `12px`,
-          backgroundColor: `#daf7eb`,
-          backgroundColor: `transparent`,
-          color: `#4ad991`,
-        }}
-      >
-        #flutter
-      </button>
-      <button
-        style={{
-          border: `1px solid #8280ff`,
-          borderRadius: `8px`,
-          padding: `4px 10px`,
-          marginLeft: `15px`,
-          fontSize: `12px`,
-          backgroundColor: `#ebe7ff`,
-          backgroundColor: `transparent`,
-          color: `#8280ff`,
-        }}
-      >
-        #gatsbyjs
-      </button>
-          <nav style={{marginTop:`15px`}}>
+              fontSize: `12px`,
+              backgroundColor: `#FFF7DD`,
+              backgroundColor: `transparent`,
+              color: `#F7B801`,
+            }}
+          >
+            #javascript
+          </button>
+          <button
+            style={{
+              border: `1px solid #4ad991`,
+              borderRadius: `8px`,
+              padding: `4px 10px`,
+              // margin:`0 auto`
+              marginLeft: `15px`,
+              fontSize: `12px`,
+              backgroundColor: `#daf7eb`,
+              backgroundColor: `transparent`,
+              color: `#4ad991`,
+            }}
+          >
+            #flutter
+          </button>
+          <button
+            style={{
+              border: `1px solid #8280ff`,
+              borderRadius: `8px`,
+              padding: `4px 10px`,
+              marginLeft: `15px`,
+              fontSize: `12px`,
+              backgroundColor: `#ebe7ff`,
+              backgroundColor: `transparent`,
+              color: `#8280ff`,
+            }}
+          >
+            #gatsbyjs
+          </button>
+          <nav style={{ marginTop: `15px` }}>
             <ul
               style={{
                 display: `flex`,

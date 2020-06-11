@@ -22,7 +22,7 @@ class Blog extends React.Component {
           alt=""
         ></img>
         <SEO title="Blog" />
-        <div style={{ marginTop: 24 }}>
+        <div style={{ marginTop: 36, wordBreak:`` }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -53,7 +53,7 @@ class Blog extends React.Component {
                     style={{
                       margin: `0`,
                       lineHeight: `1.0`,
-                      // fontFamily: `"sofia", sans-serif`,
+                      fontFamily: `"sans", sans-serif`,
                       fontSize: `1.2rem`,
                     }}
                   >
@@ -90,14 +90,12 @@ class Blog extends React.Component {
                 </div>
                 <p
                   style={{
-                    // textAlign:`center`,
-                    color: `var(--secondaryText)`,
-                    color: `#454545`,
+                    color: `var(--txtColor)`,
+                    // color: `#454545`,
                     color: `#6f6f6f`,
                     marginTop: `0px`,
-                  //  marginBottom:`0px`,
+                    fontFamily: `"sans", sans-serif`,
                     fontSize: `0.9rem`,
-                    
                     lineHeight: `1.3`,
                     
                   }}

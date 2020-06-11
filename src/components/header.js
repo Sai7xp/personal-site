@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => (
       style={{
         padding: `0.7rem 18px`,
         paddingTop: `0.4rem`,
-        maxWidth: "37.4em",
+        maxWidth: "39em",
         justifyContent: "space-between",
         alignItems: "center",
         margin: "0 auto",
