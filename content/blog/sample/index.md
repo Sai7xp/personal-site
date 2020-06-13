@@ -1,6 +1,7 @@
 ---
 title: Let's see Quest for the Perfect Dark Mode
 date: "2020-02-22T13:15:03.284Z"
+tags: ["css", "web", "javascript"]
 description: "We'll need some state! It's up to you how to manage state, but in this example, we'll use React context."
 imagepath: "https://www.taniarascia.com/static/d46d5640598e2cbc03373885d2226c51/de03e/cookie.png"
 author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"

@@ -64,6 +64,7 @@ const Header = ({ siteTitle }) => (
         <HeaderLink to="/about" activeStyle={{ color: `var(--tblue)` }}>
           About
         </HeaderLink>
+        
        
       <div
         style={{

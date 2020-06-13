@@ -7,6 +7,7 @@
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "dev-widget": "^1.2.0",
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
     "gatsby-plugin-catch-links": "^2.3.3",
