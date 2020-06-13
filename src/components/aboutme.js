@@ -4,7 +4,6 @@ import wavemoji from "../images/wave.png"
 import svg1 from "../images/site-icon.png"
 import svg from "../images/SVG/2.svg"
 import SEO from "../components/seo"
-import "dev-widget"
 const AboutDesc = styled.h2`
   font-family: "sofia", sans-serif;
   /* font-weight: 300; */
