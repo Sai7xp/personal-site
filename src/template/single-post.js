@@ -5,7 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import author from "../images/avatar.png"
-import "github-devprofile"
+// import "github-devprofile"
+import {Helmet} from "react-helmet"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -192,6 +193,10 @@ class BlogPostTemplate extends React.Component {
               </li>
             </ul>
           </nav>
+          <Helmet>
+          <script src="https://unpkg.com/github-devprofile@1/dist/card.component.min.mjs" type="module"></script>
+        </Helmet>
+        
           <div style={{ margin: `auto`, display:`flex`, justifyContent:`center`}}><git-widget data-username="movingmelody"></git-widget></div>
           <footer
             style={{
