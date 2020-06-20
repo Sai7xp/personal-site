@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import author from "../images/avatar.png"
+import "github-devprofile"
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -105,6 +106,7 @@ class BlogPostTemplate extends React.Component {
               opacity: `0.6`,
             }}
           />
+          
           {/* </article> */}
           <h2>Tags:</h2>
           <button
@@ -167,7 +169,7 @@ class BlogPostTemplate extends React.Component {
                   fontSize: `16px`,
                 }}
               >
-                Previous
+                
                 <br />
                 {previous && (
                   <Link to={previous.fields.slug} rel="prev">
@@ -180,7 +182,7 @@ class BlogPostTemplate extends React.Component {
                   fontSize: `16px`,
                 }}
               >
-                Next
+                
                 <br />
                 {next && (
                   <Link to={next.fields.slug} rel="next">
@@ -190,6 +192,7 @@ class BlogPostTemplate extends React.Component {
               </li>
             </ul>
           </nav>
+          <div style={{ margin: `auto`, display:`flex`, justifyContent:`center`}}><git-widget data-username="movingmelody"></git-widget></div>
           <footer
             style={{
               textAlign: `center`,
@@ -202,6 +205,7 @@ class BlogPostTemplate extends React.Component {
           >
             © {new Date().getFullYear()} | Designed by Sumanth.
           </footer>
+          
         </div>
       </div>
     )

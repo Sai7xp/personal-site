@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import wavemoji from "../images/wave.png"
-import svg1 from "../images/site-icon.png"
 import svg from "../images/SVG/2.svg"
 import SEO from "../components/seo"
+import "github-devprofile"
 const AboutDesc = styled.h2`
   font-family: "sofia", sans-serif;
   /* font-weight: 300; */
@@ -36,6 +36,7 @@ function AboutMe() {
         For the past several years I have worked in lead qualification,
         telemarketing, and customer service in the technology industry.
       </AboutDesc>
+      <git-widget data-username="movingmelody"></git-widget>
       
     </div>
   )
