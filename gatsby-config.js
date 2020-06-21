@@ -16,11 +16,11 @@ module.exports = {
               classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
-              showLineNumbers: false ,
+              showLineNumbers: false,
               noInlineHighlight: false,
             },
           },
-          'gatsby-remark-code-buttons',
+          "gatsby-remark-code-buttons",
         ],
       },
     },
@@ -43,10 +43,20 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
+    "gatsby-plugin-dark-mode",
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+
+    // Google analytics Plugin
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-170215310-1",
       },
     },
     {

@@ -24,7 +24,7 @@ I wanted to write a blog post, so naturally had to make something that'd turn ma
 * Templates
 
 ## Usage
-```
+```javascript
   $ <filename>
 
   Options

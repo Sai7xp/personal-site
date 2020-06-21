@@ -10,6 +10,8 @@ import { rhythm } from "../utils/typography"
 import bgSvg from "../images/bg2.svg"
 
 
+
+
 const listItems = [
   { link: "#Problems", name: "About" },
   { link: "#about", name: "Blog" },
@@ -29,6 +31,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
+    
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
     
@@ -44,6 +47,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
       </div>
     </>
+  
   )
 }
 
