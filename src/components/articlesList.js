@@ -2,12 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 const articlesList = () => {
   return (
-    <div style={{ marginTop: `40px`, fontFamily:`"sans",sans-serif` }}>
+    <div style={{ marginTop: `40px`, fontFamily: `"sans",sans-serif` }}>
       <h4
         className=".article-head"
         style={{
           fontFamily: `"Inter", sans-serif`,
-          
+
           margin: `0`,
           display: `flex`,
           marginBottom: `15px`,
@@ -18,10 +18,13 @@ const articlesList = () => {
       >
         {/* <span>Latest Articles</span> */}
       </h4>
-      <p style={{
-        fontSize:"20px",
-        
-      }}>01. Recent Articles</p>
+      <p
+        style={{
+          fontSize: "20px",
+        }}
+      >
+        01. Recent Articles
+      </p>
       <div
         style={{
           display: `grid`,
@@ -30,7 +33,7 @@ const articlesList = () => {
         }}
       >
         <img
-          src="https://create-react-app.dev/img/logo-og.png"
+          src="https://miro.medium.com/max/785/1*H-25KB7EbSHjv70HXrdl6w.png"
           alt=""
           width="30"
           height="30"
@@ -47,11 +50,14 @@ const articlesList = () => {
             // display:`inline`
             margin: `0`,
             lineHeight: `1.2`,
-             color:`var(--theme)`,
+            color: `var(--theme)`,
             fontSize: `1.2rem`,
           }}
-        ><a href="https://sumanth.netlify.app/quality-ssr-with-react/">
-          Quality Server-Side Rendering with React </a><br />{" "}
+        >
+          <a href="https://sumanth.netlify.app/javascript-symbols-tour/">
+            What exactly are SYMBOLS in Javascript ?{" "}
+          </a>
+          <br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -61,7 +67,7 @@ const articlesList = () => {
               fontSize: `0.7rem`,
             }}
           >
-            March 23, 2020 ~ 7 min read
+            March 23, 2021 ~ 7 min read
           </small>
         </p>
       </div>
@@ -90,12 +96,13 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
-            color:`var(--theme)`,
+            color: `var(--theme)`,
             lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
         >
-          Implement dark mode like a pro in Gatsby<br />{" "}
+          Implement dark mode like a pro in Gatsby
+          <br />{" "}
           <small
             style={{
               // textAlign:`center`,
@@ -114,11 +121,11 @@ const articlesList = () => {
           display: `grid`,
           gridTemplateColumns: `40px 2fr auto`,
 
-          marginBottom: `30px`,
+          marginBottom: `10px`,
         }}
       >
         <img
-          src="https://miro.medium.com/max/785/1*H-25KB7EbSHjv70HXrdl6w.png"
+          src="https://marlom.dev/images/posts/upgrade-to-react-17-and-webpack-5/header.png"
           alt=""
           width="30"
           height="30"
@@ -134,27 +141,35 @@ const articlesList = () => {
           style={{
             // display:`inline`
             margin: `0`,
-            color:`var(--theme)`,
+            color: `var(--theme)`,
             lineHeight: `1.2`,
             fontSize: `1.2rem`,
           }}
         >
-        <a href="https://sumanth.netlify.app/wth-is-currying/">
-          What the heck is Currying? ft. JavaScript</a> <br />{" "}
+          <a href="https://sumanth.netlify.app/module-bundlers-webpack/">
+            What are Module Bundlers ? How to configure Webpack ?
+          </a>{" "}
+          <br />{" "}
           <small
             style={{
               // textAlign:`center`,
               color: `var(--textNormal)`,
               marginTop: `0`,
+              marginBottom: `0`,
 
               fontSize: `0.7rem`,
             }}
           >
-            May 23, 2019 ~ 3 min read
+            Feb 18, 2021 ~ 2 min read
           </small>
         </p>
       </div>
-
+      <a
+        style={{ fontSize: "14px", paddingTop: "0px", marginTop: "0px" }}
+        href="https://sumanth.netlify.app/blog"
+      >
+        read more articles here
+      </a>
       {/* <button
         style={{
           border: `1px solid #F7B801`,
@@ -212,20 +227,34 @@ const articlesList = () => {
           fontSize: `18px`,
           textTransform: `uppercase`,
         }}
+      ></h4>
+      <p
+        style={{
+          fontSize: "20px",
+          // color:`var(--theme)`
+        }}
       >
-        
-      </h4>
-      <p style={{
-        fontSize:"20px",
-        // color:`var(--theme)`
-      }}>02. Technologies I work with:</p>
-      <ul style={{
-        display:`grid`,
-        marginLeft:`50px`,
-        gridTemplateColumns: `repeat(2, minmax(140px, 200px))`,
-        
-
-      }} className="tech">
+        02. Projects :<br></br>
+        <small style={{ fontSize: "14px" }}>
+          will be updated soon.. for now visit github
+        </small>
+      </p>
+      <p
+        style={{
+          fontSize: "20px",
+          // color:`var(--theme)`
+        }}
+      >
+        03. Technologies I work with:
+      </p>
+      <ul
+        style={{
+          display: `grid`,
+          marginLeft: `50px`,
+          gridTemplateColumns: `repeat(2, minmax(140px, 200px))`,
+        }}
+        className="tech"
+      >
         <li>Flutter</li>
         <li>Gatsby Js</li>
         <li>MERN Stack</li>
@@ -233,7 +262,6 @@ const articlesList = () => {
         <li>Javascript</li>
         <li>Figma </li>
       </ul>
-      
     </div>
   )
 }

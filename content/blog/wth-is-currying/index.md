@@ -1,6 +1,6 @@
 ---
 title: What the heck is Currying? ft. JavaScript
-date: "2020-05-18T13:15:03.284Z"
+date: "2019-05-18T13:15:03.284Z"
 tags: ["web", "javascript"]
 description: "Currying is an essential part of Functional Progr-amming, let's see what the heck is it."
 imagepath: "https://miro.medium.com/max/785/1*H-25KB7EbSHjv70HXrdl6w.png"

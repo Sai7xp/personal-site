@@ -34,11 +34,15 @@ function AboutMe() {
         skills.
         <br />
         <br />
-        For the past several years I have worked in lead qualification,
-        telemarketing, and customer service in the technology industry.
+       🛠⚒ DESIGNING THIS PAGE WILL BE UPDATED SOON....
       </AboutDesc>
 
+      {/* <git-widget data-username="movingmelody"></git-widget> */}
       <git-widget data-username="movingmelody"></git-widget>
+      <script
+        src="https://unpkg.com/github-devprofile@2/dist/card.component.min.mjs"
+        type="module"
+      ></script>
     </div>
   )
 }

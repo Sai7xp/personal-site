@@ -12,6 +12,7 @@ class Blog extends React.Component {
 
     return (
       <Layout>
+      <h4 style={{marginTop:"40px"}}>From the desk of Sumanth</h4>
         <img
           className="bg-svg2"
           style={{

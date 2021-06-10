@@ -3,7 +3,7 @@ title: Some resources to learn CSS in 2020
 date: "2020-05-16T13:15:03.284Z"
 tags: ["css", "web", "javascript"]
 description: "Css resources that will sharpen your Web design skills."
-imagepath: "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg"
+imagepath: "https://i.pinimg.com/originals/04/41/ea/0441ea5619b979bde781aa040943c208.gif"
 author: "https://sumanth.netlify.app/static/avatar-a900fb7f56d08d8331e5b8b67b1a09f7.png"
 ---
 
