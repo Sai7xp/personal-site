@@ -20,12 +20,12 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         keywords={post.frontmatter.keywords ? post.frontmatter.keywords : []}
         meta={[{ property: 'og:type', content: 'article' }]}
       />
-
       <h1 className="post-header">{post.frontmatter.title}</h1>
+
       <div className="post-each-info">
         <span className="post-date">
           {formatPostDate(post.frontmatter.date)}
-          {post.frontmatter.modified_date ? ` (updated: ${formatPostDate(post.frontmatter.modified_date)})` : ''}
+          {/* {post.frontmatter.modified_date ? ` (updated: ${formatPostDate(post.frontmatter.modified_date)})` : ''} */}
         </span>
 
         {/* <span className="post-meta"> */}

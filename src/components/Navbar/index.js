@@ -1,10 +1,10 @@
 // @ts-check
 import React from 'react';
 import { Link } from 'gatsby';
-
 import './navbar.css';
-import DarkModeToggle from '../DarkMode';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
+deckDeckGoHighlightElement();
 const Navbar = () => {
   return (
     <header className="site-header" role="banner">

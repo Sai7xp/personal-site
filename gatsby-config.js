@@ -3,7 +3,7 @@ module.exports = {
     title: `Sai Sumanth`,
     description: ``,
     author: `Sai Sumanth`,
-    siteUrl: 'https://www.Sai7xp.com',
+    siteUrl: 'https://www.sumanth.netlify.app',
     social: {
       twitter: 'Sai7xp',
       github: 'Sai7xp',
@@ -20,6 +20,17 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
+          'gatsby-remark-code-buttons',
+          {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               icon: false,
@@ -31,15 +42,15 @@ module.exports = {
               maxWidth: 1200,
             },
           },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              aliases: {
-                sh: 'shell',
-              },
-              inlineCodeMarker: '÷',
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-prismjs`,
+          //   options: {
+          //     aliases: {
+          //       sh: 'shell',
+          //     },
+          //     inlineCodeMarker: '÷',
+          //   },
+          // },
         ],
       },
     },

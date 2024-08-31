@@ -13,7 +13,7 @@ keywords:
 
 It's a primitive data of Javascript, along with String, Number (Integers, Floats, Infinity, NaN), Boolean, null, and undefined. And it represents a "unique" Identifier. Introduced in ECMAScript 2015, ES6.
 
-### How they can be used ?
+## How they can be used ?
 
 They bring a few benefits to the language and are particularly useful when used as object **properties**. But, what can they do for us that strings cannot? Usually, we use **strings** as object properties.
 
@@ -42,7 +42,7 @@ person[RUN] = () => 'Person is running';
 console.log(person[RUN]()); //'Person is running'
 ```
 
-### Creating Symbols
+## Creating Symbols
 
 A value of this type can be created using `Symbol()`:
 
@@ -96,7 +96,7 @@ console.log(value1 === value2); // true
 
 ---
 
-### Why Symbols are Introduced
+## Why Symbols are Introduced
 
 - Basically, primitive values are **Immutable**. They can't be changed. Of course, a variable with a primitive assigned can be reassigned. For example, when you write the code let x = 1; x++; you've **reassigned** the variable x. But, you haven't mutated the primitive numeric value of 1.
 - However, if you modify a non-primitive value, the modified value will also be modified where it has been called from.
@@ -142,7 +142,7 @@ Objects play an elemental role in the JavaScript language. They’re often used 
 
 ---
 
-### Where can we use `Symbols` (Symbols actual Use-case)
+## Where can we use Symbols (actual use-case)
 
 - There are the ways to add new `properties` to an Object:
 

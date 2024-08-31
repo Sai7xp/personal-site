@@ -1,6 +1,6 @@
 footer {
-  /* box-shadow: 0 -3px 2px -2px var(--border-color-2); */
   border-top: 1.4px solid var(--border-color-1);
+  border-top: 1.5px dotted var(--border-color-1);
   color: var(--primary-text-color);
   display: flex;
   flex-direction: row;
@@ -12,10 +12,20 @@ footer {
   padding-block: 2em;
 }
 
+.social-svg-image {
+  margin: 0 10px;
+  width: 14px;
+  height: 14px;
+}
 .site-footer a,
 .site-footer a:visited {
   color: var(--primary-text-color);
-  text-decoration: underline;
+  /* text-decoration: underline; */
+}
+
+.contact-list {
+  font-size: 1.05em;
+  font-family: 'Jetbrains Mono';
 }
 
 .contact-list,

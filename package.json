@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Sai Sumanth <saisumanth2303@gmail.com>",
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^3.6.0",
     "gatsby": "^5.13.3",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^5.13.1",
@@ -15,6 +16,8 @@
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-remark-autolink-headers": "^6.13.1",
+    "gatsby-remark-code-buttons": "^2.0.7",
+    "gatsby-remark-highlight-code": "^3.3.0",
     "gatsby-remark-images": "^7.13.1",
     "gatsby-remark-prismjs": "^7.13.1",
     "gatsby-source-filesystem": "^5.13.1",

@@ -11,7 +11,7 @@ header {
   /* margin: 0 auto; */
   position: relative;
   margin-bottom: 1em;
-  border-bottom: 1.2px solid var(--border-color-1);
+  border-bottom: 1.5px dotted var(--border-color-1);
   /* box-shadow: 0 3px 2px -2px var(--border-color-2); */
 }
 
