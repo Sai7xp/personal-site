@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import './footer.css';
-import twitter from './twitter.svg';
-import linkedin from './linkedin.svg';
-import github from './github.svg';
-import Mail from './mail.svg';
+import twitter from '../../images/twitter.svg';
+import linkedin from '../../images/linkedin.svg';
+import github from '../../images/github.svg';
+import Mail from '../../images/mail.svg';
 
 const Footer = () => {
   const data = useStaticQuery(graphql`

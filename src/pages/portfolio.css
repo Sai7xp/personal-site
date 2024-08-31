@@ -20,6 +20,13 @@
   transition: padding-left 0.4s ease;
 }
 
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 90% 70%;
+  display: inline-block;
+}
 .mini-projects-ul li:last-child {
   border-bottom: none;
 }

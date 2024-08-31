@@ -7,11 +7,21 @@ import ProjectPage from './portfolio';
 
 const IndexPage = () => (
   <Layout>
-    <h2>Who am I ?</h2>
     <SEO title="About" keywords={['sai7xp info', 'sai sumanth info', 'about sai sumanth', 'about sai7xp', 'sai7xp']} />
+    <h2>Who am I ?</h2>
     <div className="post-content">
-      <p>Hey, I am Sai Sumanth, a software engineer From India. I primarily work on backend-systems. </p>
+      <p className="">
+        Hey <p className="wave">👋</p>
+      </p>
+      <p>
+        I am Sai Sumanth, Software engineer From India. Primarily working on backend-systems.
+        {/* I built 
+        Take a look at GitHub to
+        see what I've built over the past few years.{' '} */}
+      </p>
 
+      <p>I love talking about computers, cats, fitness.</p>
+      <br />
       <h2>Recent reads that I enjoyed</h2>
       <ul>
         <li>
