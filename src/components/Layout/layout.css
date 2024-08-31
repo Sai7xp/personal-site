@@ -1,0 +1,311 @@
+/* * {
+  box-sizing: border-box;
+  background: rgb(0 100 0/ 0.1) !important;
+} */
+
+*,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Nord theme color schemes */
+* {
+  --mobile-padding: 15px;
+
+  /* snowstorm - nord */
+  --nord-snowstorm-1: #d8dee9;
+  --nord-snowstorm-2: #e5e9f0;
+  --nord-snowstorm-3: #eceff4;
+
+  /* Polar Night */
+  --nord-polar-night-1: #2e3440;
+  --nord-polar-night-2: #3b4252;
+  --nord-polar-night-3: #434c5e;
+  --nord-polar-night-4: #4c566a;
+
+  /* Frost */
+  --nord-frost-1: #8fbcbb;
+  --nord-frost-2: #88c0d0;
+  --nord-frost-3: #81a1c1;
+  --nord-frost-4: #5e81ac;
+
+  /* Aurora */
+  --nord-aurora-1: #bf616a;
+  --nord-aurora-2: #d08770;
+  --nord-aurora-3: #ebcb8b;
+  --nord-aurora-4: #a3be8c;
+  --nord-aurora-5: #b48ead;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  /* snowstorm - nord */
+  --nord1: var(--nord-snowstorm-1);
+  --nord2: var(--nord-snowstorm-2);
+  --nord3: var(--nord-snowstorm-3);
+
+  --bg-color: #ffffff;
+
+  --tag-bg-color: #4c566a;
+  --tag-color: var(--nord3);
+
+  --border-color-1: #e8e8e8;
+  --border-color-2: var(--nord-polar-night-1);
+
+  --highlight-color-1: var(--nord-snowstorm-1);
+  --highlight-color-rgb: 247, 238, 127;
+
+  --primary-text-color: #232323;
+  /* --secondary-text-color: #3b4252; */
+  /* --primary-text-color: #374151; */
+
+  --secondary-text-color: #999999;
+  --primary-brand: #8280ff;
+  --primary-brand2: #838feb;
+
+  --toggle-bg-color: var(--nord-polar-night-1);
+  --toggle-btn-color: var(--nord-snowstorm-3);
+
+  --blockquote-bg: var(--nord-snowstorm-3);
+
+  --table-of-contents-bg: var(--nord-snowstorm-3);
+
+  --code-bg: var(--nord-snowstorm-2);
+}
+
+html[data-theme='dark'] {
+  --nord1: var(--nord-polar-night-1);
+  --nord2: var(--nord-polar-night-2);
+  --nord3: var(--nord-polar-night-3);
+  --nord4: var(--nord-polar-night-4);
+
+  --bg-color: var(--nord1);
+
+  --tag-bg-color: var(--nord-polar-night-2);
+  --tag-color: var(--nord-snowstorm-1);
+
+  --border-color-1: #3b4252;
+  --border-color-2: #434c5e;
+
+  --highlight-color-1: var(--nord-frost-4);
+  --highlight-color-rgb: 236, 87, 89;
+
+  /* --primary-text-color: var(--nord-snowstorm-1); */
+  --primary-text-color: #ffffff;
+  --secondary-text-color: var(--nord-snowstorm-2);
+
+  --toggle-bg-color: var(--nord-snowstorm-3);
+  --toggle-btn-color: var(--nord-polar-night-1);
+
+  --blockquote-bg: var(--nord-polar-night-2);
+
+  --table-of-contents-bg: var(--nord-polar-night-2);
+
+  --code-bg: var(--nord-polar-night-3);
+}
+
+@font-face {
+  font-family: 'GeistMono';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../Layout/fonts/Geist-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'sofia';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../Layout/fonts/sofia-light.otf);
+}
+
+html[data-theme='dark'] img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Sanchez:ital@0;1&display=swap');
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+hr,
+dl,
+dd,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -moz-font-feature-settings: 'kern' 1;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-feature-settings: 'kern' 1;
+  -webkit-font-feature-settings: 'kern' 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
+  background-color: #ffffdc;
+  border-top: 5px solid var(--border-color-2);
+  color: var(--primary-text-color);
+  font-family: 'GeistMono', sans-serif, Helvetica, Arial;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  line-height: 1.75em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper,
+.main-wrapper {
+  height: 100%;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: 14px;
+}
+
+ul,
+ol {
+  margin-left: 1em;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: 'JetBrains Mono', sans-serif, Helvetica, Arial;
+  color: var(--primary-brand);
+  color: #0f172a;
+}
+
+.main-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 450px) {
+  .main-wrapper {
+    padding: 10px var(--mobile-padding);
+  }
+}
+
+.icon > svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon > svg path {
+  fill: var(--secondary-text-color);
+}
+
+#page-title {
+  margin: 0;
+}
+
+/***********************/
+/******** Links ********/
+/***********************/
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-text-color);
+  text-decoration: underline;
+}
+
+/**********************/
+/**** Block quotes ****/
+/**********************/
+blockquote {
+  color: var(--primary-text-color);
+  padding: 0.3em 1em;
+  background-color: var(--blockquote-bg);
+  margin: 1em 0;
+  font-style: italic;
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  blockquote {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+
+/***************************/
+/**** CODE HIGHLIGHTING ****/
+/***************************/
+.gatsby-highlight > pre {
+  font-size: 0.8em;
+  padding: 0.5em var(--mobile-padding);
+  background-color: var(--nord-polar-night-2);
+}
+
+@media screen and (max-width: 450px) {
+  .gatsby-highlight > pre[class*='language'] {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+}
+
+/* Inline code blocks */
+:not(pre) > code[class='language-text'] {
+  background-color: var(--code-bg);
+  color: inherit;
+  display: inline-block;
+  line-height: 0.85em;
+  font-size: 0.8em;
+  padding: 0.25em 0.3em;
+  border: 1px solid var(--border-color-2);
+  border-radius: 5px;
+}
+
+/************************/
+/*** THEME TRANSITION ***/
+/************************/
+html.transition,
+html.transition *,
+html.transition *::after,
+html.transition *::before {
+  transition: all 500ms !important;
+  transition-delay: 0 !important;
+}

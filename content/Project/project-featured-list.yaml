@@ -1,0 +1,30 @@
+- type: Telegram Bot
+  name: TokenNews
+  skills:
+    - Telegram API
+    - Twitter API
+    - Reddit API
+    - NickJS
+    - Web Scraping
+    - ExpressJs
+  duration:
+    - 2017/10/10
+  description: An awesome telegram bot.
+  image: './Images/tokennews.png'
+  sourceCodeUrl: ''
+  demoUrl: 'https://t.me/TokenElite'
+
+- type: SaaS
+  name: EmailFinder
+  image: './Images/email-finder.png'
+  description: A Saas application that scrapes email from all the urls provided in a googlesheet.
+  demoUrl: https://aarrr-formations.com/tools/emailfinder/
+  duration:
+    - 2018/09/19
+    - 2019/10/10
+  skills:
+    - Google Spreadsheet API
+    - Message Queueing
+    - NodeMailer
+    - Sqlite3
+    - ExpressJS

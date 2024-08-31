@@ -1,0 +1,230 @@
+.post-list {
+  margin: 0;
+  list-style: none;
+  font-family: 'Jetbrains Mono', sans-serif, 'Helvetica Neue', Helvetica, Arial;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--border-color-1);
+  padding: 0.4em 0;
+}
+
+.post-list li:first-child {
+  padding-top: 0;
+}
+
+.post-list li:last-of-type {
+  border-bottom: none;
+}
+
+.post-list li a {
+  color: var(--primary-text-color);
+  margin-left: 25px;
+}
+
+.post-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 25px;
+  letter-spacing: -1px;
+}
+
+.post-date {
+  font-size: 12px;
+  white-space: nowrap;
+  color: var(--secondary-text-color);
+}
+
+.post-meta {
+  display: flex;
+  gap: 5px;
+  line-height: 10px;
+}
+
+.post-meta .post-tag {
+  border-radius: 5px;
+  background: var(--tag-bg-color);
+  display: inline-block;
+  font-size: 0.5em;
+  line-height: 0.8em;
+  padding: 5px;
+  color: var(--tag-color);
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  gap: 5px;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.post-link a,
+.post-link a:visited {
+  color: var(--primary-text-color);
+}
+
+.post-content {
+  font-size: 1.03em;
+  font-family: 'sofia', serif;
+  color: var(--primary-text-color);
+  word-wrap: break-word;
+}
+
+.post-content p {
+  margin-top: 8px;
+}
+
+.post-content img {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+  border: 1px solid var(--border-color-1);
+}
+
+.post-header {
+  font-size: 1.2em;
+  margin: 0.5em auto;
+}
+
+@media screen and (max-width: 450px) {
+  .post-header {
+    margin: 0.5em auto;
+  }
+}
+
+/*************************/
+/********* LINKS *********/
+/*************************/
+.post-content a:visited {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.post-content a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  border-bottom: 0.1em solid var(--primary-text-color);
+}
+
+.post-content hr {
+  margin: 1em 0;
+}
+
+/**************************/
+/********* IMAGES *********/
+/**************************/
+
+/* Image full width on smaller screens */
+@media screen and (max-width: 450px) {
+  span.gatsby-resp-image-wrapper {
+    /* Important because gatsby adds inline margin */
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+}
+
+/* Image Caption */
+span.gatsby-resp-image-wrapper + em {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+span.gatsby-resp-image-wrapper + em::after,
+.post-content img + em::after {
+  content: ' •';
+}
+
+span.gatsby-resp-image-wrapper + em::before,
+.post-content img + em::before {
+  content: '• Fig: ';
+}
+
+.post-content img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  text-align: left;
+  margin: 0.5em 0;
+}
+
+th,
+td {
+  padding: 0.2em 1em;
+  border: 2px solid var(--nord3);
+}
+
+/* Table of contents */
+.table-of-contents {
+  padding: 1em var(--mobile-padding);
+  margin: 1em 0;
+  background-color: var(--table-of-contents-bg);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 450px) {
+  .table-of-contents {
+    min-width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    border-radius: 0;
+    padding-inline: var(--mobile-padding);
+  }
+}
+
+.table-of-contents li p {
+  margin-bottom: 0;
+}
+
+.post-each-info {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+  gap: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  .post-list {
+    gap: 5px;
+  }
+
+  .post-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .post-date {
+    /* font-size: 0.7em; */
+    color: var(--secondary-text-color);
+  }
+
+  .post-item {
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-bottom: 10px; */
+  }
+
+  .post-list li a {
+    margin-left: 0;
+  }
+
+  .post-each-info {
+    flex-direction: column;
+  }
+}

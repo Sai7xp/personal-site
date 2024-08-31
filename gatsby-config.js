@@ -3,10 +3,10 @@ module.exports = {
     title: `Sai Sumanth`,
     description: ``,
     author: `Sai Sumanth`,
-    siteUrl: "https://www.Sai7xp.com",
+    siteUrl: 'https://www.Sai7xp.com',
     social: {
-      twitter: "Sai7xp",
-      github: "Sai7xp",
+      twitter: 'Sai7xp',
+      github: 'Sai7xp',
     },
   },
   plugins: [
@@ -35,9 +35,9 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {
               aliases: {
-                sh: "shell",
+                sh: 'shell',
               },
-              inlineCodeMarker: "÷",
+              inlineCodeMarker: '÷',
             },
           },
         ],
@@ -83,7 +83,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 });
               });
             },
@@ -104,10 +104,16 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Sai7xp Blog RSS Feed",
+            output: '/rss.xml',
+            title: 'Sai7xp Blog RSS Feed',
           },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-page-progress',
+      options: {
+        color: `#8280ff`,
       },
     },
   ],
