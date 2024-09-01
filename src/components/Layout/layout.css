@@ -176,7 +176,7 @@ body {
   font-family: 'GeistMono', sans-serif, Helvetica, Arial;
   font-feature-settings: 'kern' 1;
   font-kerning: normal;
-  line-height: 1.75em;
+  line-height: 1.7em;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -207,6 +207,11 @@ ol {
   margin-left: 1em;
 }
 
+ul li::marker {
+  /* color: #d1d5db; */
+  color: #0f172a;
+}
+
 li > ul,
 li > ol {
   margin-bottom: 0;
@@ -219,7 +224,7 @@ h4,
 h5,
 h6 {
   font-family: 'ETBook', sans-serif, Helvetica, Arial;
-  color: var(--primary-brand);
+  /* color: var(--primary-brand); */
   color: #0f172a;
 }
 
@@ -255,7 +260,7 @@ h6 {
   }
 }
 .main-wrapper {
-  max-width: 860px;
+  max-width: 800px;
   margin: 0 auto;
 }
 

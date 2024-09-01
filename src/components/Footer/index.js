@@ -42,7 +42,7 @@ const Footer = () => {
         </span>
       </div>
       <span className="contact-list">
-        © 2018-{new Date().getFullYear()} {data.site.siteMetadata.author}
+        © 2021-{new Date().getFullYear()} {data.site.siteMetadata.author}
       </span>
     </footer>
   );

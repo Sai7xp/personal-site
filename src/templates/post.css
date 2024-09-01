@@ -31,9 +31,10 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  line-height: 25px;
-  letter-spacing: -1px;
-  font-family: 'Jetbrains Mono';
+  /* line-height: 25px; */
+  /* letter-spacing: -1px; */
+  font-family: 'ETBook';
+  font-size: 1.15em;
 }
 
 .post-date {
@@ -50,13 +51,13 @@
 }
 
 .post-meta .post-tag {
-  border-radius: 5px;
-  background: var(--tag-bg-color);
+  border-radius: 4px;
+  background: var(--secondary-text-color);
   display: inline-block;
-  font-size: 0.5em;
-  line-height: 0.8em;
-  padding: 5px;
-  color: var(--tag-color);
+  font-size: 0.55em;
+  /* line-height: 0.8em; */
+  padding: 3px 6px;
+  color: #ffffff;
 }
 
 .post-info {
@@ -73,6 +74,13 @@
 .post-link a:visited {
   color: var(--primary-text-color);
 }
+
+.post-content .project-desc {
+  line-height: 1.4em;
+  color: var(--secondary-text-color);
+}
+
+
 
 .post-content {
   font-size: 1.03em;
@@ -195,7 +203,8 @@ td {
 
 .post-each-info {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items: center;
   line-height: 20px;
   gap: 5px;
   margin-bottom: 2em;
@@ -228,6 +237,6 @@ td {
   }
 
   .post-each-info {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }

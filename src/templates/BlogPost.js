@@ -28,13 +28,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           {/* {post.frontmatter.modified_date ? ` (updated: ${formatPostDate(post.frontmatter.modified_date)})` : ''} */}
         </span>
 
-        {/* <span className="post-meta"> */}
-        {/* {post.frontmatter.categories.map((x, idx) => (
+        <span className="post-meta">
+          {post.frontmatter.categories.map((x, idx) => (
             <span key={idx} className="post-tag">
               {x}
             </span>
-          ))} */}
-        {/* </span> */}
+          ))}
+        </span>
       </div>
 
       <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />

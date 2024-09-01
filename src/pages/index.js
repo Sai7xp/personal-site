@@ -12,8 +12,7 @@ const IndexPage = () => {
       <div className="blog-intro">
         <h2>Archive</h2>
         <p>
-          I share my personal experiences, guides, interesting discoveries about programming, backend systems,
-          databases, computers
+          I write about my personal experiences, guides, interesting discoveries about programming, backend development
         </p>
       </div>
       <PostList />
