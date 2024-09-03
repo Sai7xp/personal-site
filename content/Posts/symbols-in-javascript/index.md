@@ -35,7 +35,7 @@ const person = {
   [NAME]: 'Jonathan',
 };
 
-person[NAME]; //'Sumanth'
+person[NAME]; //'Jonathan'
 
 const RUN = Symbol();
 person[RUN] = () => 'Person is running';

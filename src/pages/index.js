@@ -11,7 +11,7 @@ const IndexPage = () => {
       <SEO title="Blog" keywords={['Sai Sumanth Blog', 'Sai7xp Blog', 'Sai7xp Home']} />
       <div className="blog-intro">
         <h2>Archive</h2>
-        <p>
+        <p style={{ fontSize: '1.05em' }}>
           I write about my personal experiences, guides, interesting discoveries about programming, backend development
         </p>
       </div>

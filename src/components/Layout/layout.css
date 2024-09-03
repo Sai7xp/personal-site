@@ -319,8 +319,9 @@ blockquote {
 /***************************/
 .gatsby-highlight > pre {
   font-size: 0.8em;
-  padding: 0.5em var(--mobile-padding);
-  background-color: var(--nord-polar-night-2);
+  padding: 0.8em var(--mobile-padding);
+  background-color: #011727;
+  /* border-radius: 8px; */
 }
 
 @media screen and (max-width: 450px) {
