@@ -62,7 +62,7 @@ fmt.Println("s2:", s2)              // [2 3 4]
 - When slice is created using `make` with specified size, it will be initialized with zero values.
 - `copy` function will copy data from array into the slice. So new slice will have their own independent memory and not linked with the original array anymore.
 
-### Different ways to create a deep copy of slice
+## Different ways to create a deep copy of slice
 
 ```go
 original := []int{1, 2, 3, 4, 5}
