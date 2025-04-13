@@ -1,5 +1,5 @@
 ---
-title: "Demystifying Character Encodings: ASCII vs Unicode vs UTF-8"
+title: "ASCII vs Unicode vs UTF vs Base64: Demystifying Character Encodings"
 description: "Let's understand charsets and encoding formats, how emojis are stored, what base64 means"
 date: "Mar 28 2024"
 ---
