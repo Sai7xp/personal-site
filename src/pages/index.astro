@@ -32,15 +32,19 @@ const projects = (await getCollection("projects"))
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi. <span class="text-xl wave">👋</span>
+      Hi <span class="text-xl text-black wave">👋</span>
     </h4>
     <div class="space-y-16">
       <section>
-        <article class="space-y-4">
-          <p class="animate">
+        <article class="space-y-3">
+          <p class="animate mt-4 m-0">
             I'm Sai Sumanth, a software engineer from India. I specialize in
             building backend systems, microservices, RESTful web servers, mobile
             apps using Flutter.
+          </p>
+          <p class="animate">
+            I prefer using Go for backend development and Java for "leetcoding".
+            I love discussing computers, cats, fitness and a bit of zen 🧘‍♂️
           </p>
           <p class="animate">
             Checkout my <Link
@@ -50,20 +54,17 @@ const projects = (await getCollection("projects"))
             >
               learn-golang
             </Link>
-
-            repository where I regularly commit about golang core-concepts,
-            concurrency patterns.
-          </p>
-          <p class="animate">
-            I use Golang for backend development and Java for "leetcoding". I
-            love discussing computers, cats, fitness and a bit of zen 🧘‍♂️
+            repository where I regularly commit about golang core-concepts, concurrency
+            patterns.
           </p>
         </article>
       </section>
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
+          <h5 class="font-semibold text-black dark:text-white text-lg">
+            Latest posts
+          </h5>
           <Link href="/blog"> See all posts </Link>
         </div>
         <ul class="flex flex-col gap-4">
@@ -106,7 +107,7 @@ const projects = (await getCollection("projects"))
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
+          <h5 class="font-semibold text-black dark:text-white text-lg">
             Recent projects
           </h5>
           <Link href="/projects"> See all projects </Link>
