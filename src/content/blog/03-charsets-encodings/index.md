@@ -10,7 +10,7 @@ date: "Mar 28 2025"
 4. UTF-8 vs UTF-16 vs UTF-32. Which one should we use ?
 5. "UTF-8 is backward compatible with ASCII", What does it mean ?
 
-If you have the same doubts, well you have come to the right place, read this blog till end and thank yourself
+If you have the same doubts, well you have come to the right place, read this blog till the end and thank yourself
 
 ## The Problem : How do we store alphabets, symbols in computer ?
 
@@ -20,13 +20,13 @@ Well, that's exactly what ASCII is (**A**merican **S**tandard **C**ode for **I**
 
 Refer to the [ASCII](https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html) chart.
 
-````rust
+```rust
 'A' -> 65 // 01000001 - this is how 'A' gets stored in computer
 'B' -> 66
 'a' -> 97
 '1' -> 49
-' ' (space) -> 32```
-````
+' ' (space) -> 32
+```
 
 **"Hi"** text gets stored as 0100100001100111 in binary Let's see how:
 
@@ -159,3 +159,7 @@ Base64 encoding of `Hey` -> `SGV5`.<br/> Size of `Hey` is 3 bytes long → 3 × 
 
 - https://www.unicode.org/consortium/consort.html
 - https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
+```
+
+```
