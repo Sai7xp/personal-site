@@ -1,6 +1,6 @@
 ---
 title: "ASCII vs Unicode vs UTF vs Base64: Demystifying Encodings"
-description: "Let's understand charsets and encoding formats, how emojis are stored, what base64 means"
+description: "Let's understand charsets and encoding formats, how emojis are stored, what base64 means."
 date: "Mar 28 2025"
 ---
 
@@ -9,6 +9,8 @@ date: "Mar 28 2025"
 3. Is ASCII still used today ?
 4. UTF-8 vs UTF-16 vs UTF-32. Which one should we use ?
 5. "UTF-8 is backward compatible with ASCII", What does it mean ?
+
+If you have the same doubts, well you have come to the right place, read this blog till end and thank yourself
 
 ## The Problem : How do we store alphabets, symbols in computer ?
 
@@ -63,34 +65,34 @@ Unicode Point Mapping:
 
 The decimal equivalent of U+0048 (Hex -> 0x48) is 72. wondering how ?
 
-> (4 x 16^1 + 8 x 16^0) = 72
+> (4 × 16¹ + 8 × 16⁰) = 72
 
-If we carefully observe letter `H` in ASCII is also 72. So the first 128 characters in Unicode are same as ASCII to support backward compatibility.
+If we observe carefully, letter `H` in ASCII is also 72. So the first 128 characters in Unicode are same as ASCII to support backward compatibility.
 
 But wait how do we store `U+1F431` in memory ? Remember, **Unicode is not an encoding.** It's just a standard that assigned numbers to all the characters. So we need a encoding mechanism to store the Unicode Points.
 
-That's where UTF(Unicode Transformation Format) comes into the picture. UTF was created by the genius minds **Ken Thompson and Rob Pike**. Yes, the same guys who created Go lang.
+That's where UTF(Unicode Transformation Format) comes into the picture. UTF was designed by the genius minds **Ken Thompson and Rob Pike**. Yes, the same legends who created Golang.
 
-A unicode-point takes anywhere between 1-4 bytes. So how about assigning 32-bits for each Unicode Point ? Well, that is what UTF-32 does.
+A unicode-point takes anywhere between 1-4 bytes to store. So how about assigning 32-bits for each Unicode Point ? Well, that is what UTF-32 does.
 
 ## UTF-32
 
-In this encoding every Codepoint is stored in memory using fixed 32 bits. But you noticed the problem right, it consumes more space. As we have seen already letter `H` Unicode value is U+0048 and it's binary is `01001000`. We just need 8 bits here. But UTF-32 encoding stores it as `00000000000000000000000001001000` lot of space is wasted. Few Unicode points require more space but few require less space. How do we solve this problem and reduce the memory consumption. Well that's where magic happened, we have a new encoding system called UTF-8.
+In this encoding every codepoint is stored in memory using fixed 32 bits. But you noticed the problem right, it consumes more space. As we saw earlier, letter `H` Unicode value is U+0048 and it's binary is `01001000`. We just need 8 bits to store it. But UTF-32 encoding stores it as `00000000000000000000000001001000` lot of space is wasted. Some Unicode points require more space but few require less space. How do we solve this problem and reduce the memory consumption. Well that's where the magic happened, we have a new encoding system called UTF-8.
 
 ## UTF-8
 
-It's a variable length encoding, uses 1 to 4 bytes per characrer depending on the unicode point. And this is the most widely used encoding system. Wait, If UTF-8 encodes each unicode point in different byte sizes how does it decodes back ? I mean how do we group the next _x_ bytes to display one unicode point ? (_x_ can vary from 1 to 4)
+UTF-8 variable length encoding, uses 1 to 4 bytes per character depending on the unicode point. And this is the most widely used encoding system. Wait, If UTF-8 encodes each unicode point in different byte sizes how does it decodes back ? I mean how do we group the next _x_ bytes to display one unicode point ? (_x_ can vary from 1 to 4)
 
-Byte grouping will be done based on the below pattern. If it starts with `11110xxx` then we have to group next 4 bytes to make it as one unicode point.
+This byte grouping will be done based on the below pattern. If it starts with `11110xxx` then we have to group next 4 bytes to form one unicode point.
 ![UTF-8 Encoding Pattern](utf-8.png)
 
 #### Let's encode one emoji using UTF-8 and see how that works:
 
-💩 Emoji requires 4 bytes so the first byte should look like `11110xxx` and the remaining continuation bytes will look like `10xxxxxx`. And these question marks are empty places where we can store `1F4A9`
+Emoji 💩 (`U+1F4A9`) requires 4 bytes so the first byte should look like `11110xxx` and the remaining continuation bytes will look like `10xxxxxx`. And these question marks are empty places where we can store `1F4A9`
 ![alt text](emoji-unicode.png)
 
 If we convert `1F4A9` into decimal we will get `128169` -> `11111010010101001`.
-So start from right we can divide our binary and put it in the empty places. And the whole binary gets stored in memory.
+So starting from right we can divide our binary and fill in the empty places. And the whole binary gets stored in memory.
 ![alt text](utf-8-pattern.png)
 <br/>
 ![alt text](utf-8-final.png)
@@ -103,7 +105,8 @@ You can verify it by using `len()` function. len() function return the length in
 
 ```go
 fmt.Println(len("A")) // prints 1
-fmt.Println(len("🐱")) // prints 4 - this cat emoji takes 4 bytes in utf-8 encoding
+fmt.Println(len("🐱")) // prints 4
+// cat emoji takes 4 bytes in utf-8 encoding
 ```
 
 > So be careful while iterating through the strings in GO. Use for...range loop instead of for...in
@@ -125,15 +128,17 @@ for i, unicodePoint := range name {
 
 ### How does our computers, phones know when new emojis are added ?
 
-When new emojios are added and if we don't update our software we will see the new emojis like `☐` this.<br/>
-🫆🫟🫩 These are few new emojis added in Unicode 16.0 version and I copied them on to my phone google address bar, This is what I got. Google app on my phone is not able to recognize these emojis, so I had to update my google App.
+When new emojios are introduced, if we don't update our software we will see the new emojis like `☐` this. Instead of the actual emoji.
+
+![new emojis in unicode 16.0](new-emojis.png)
+These are few new emojis added in Unicode 16.0 version and I copied them into Google search bar on my phone and this is what I got. Google app on my phone is not able to recognize these emojis, so I had to update my google App.
 ![alt text](emoji-search.png)
 
 ### Base64
 
 **The Problem :** How do we transfer binary data(like images, files) over text-based protocols like HTTP, JSON ?
 
-If we convert each byte into character using ASCII, some of the ASCII characters are non-printable and what if we get `"` double-quote when we convert byte into text ? It will break the JSON right ? So we need a reliable way to represent binary data as printable text. That's where base64 comes into the picture. It groups every 6 bits and replaces the group with corresponding character as per the below table.
+If we convert each byte into character using ASCII, some of the ASCII characters are non-printable and what if we get **"** double-quote when we convert byte into text ? It will break the JSON right ? So we need a reliable way to represent binary data as printable text. That's where base64 comes into the picture. It groups every 6 bits and replaces the group with corresponding character as per the below table.
 ![base64 table](base64-table.png)
 
 ```go
