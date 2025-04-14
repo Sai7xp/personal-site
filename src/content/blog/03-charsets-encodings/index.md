@@ -1,6 +1,6 @@
 ---
 title: "ASCII vs Unicode vs UTF vs Base64: Demystifying Encodings"
-description: "Let's understand charsets and encoding formats, how emojis are stored, what base64 means."
+description: "Understand charsets and encoding formats, how emojis are stored, what base64 means."
 date: "Mar 28 2025"
 ---
 
