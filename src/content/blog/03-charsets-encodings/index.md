@@ -159,7 +159,3 @@ Base64 encoding of `Hey` -> `SGV5`.<br/> Size of `Hey` is 3 bytes long → 3 × 
 
 - https://www.unicode.org/consortium/consort.html
 - https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
-
-```
-
-```
