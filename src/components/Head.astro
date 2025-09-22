@@ -181,7 +181,8 @@ const { title, description, image = "/nano.png" } = Astro.props;
     if (userTheme === "light" || userTheme === "dark") {
       toggleTheme(userTheme === "dark");
     } else {
-      toggleTheme(true);
+      // toggleTheme(true);
+      toggleTheme(window.matchMedia("(prefers-color-scheme: light)").matches);
     }
   }
 

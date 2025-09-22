@@ -14,9 +14,9 @@ If you have the same doubts, well you have come to the right place, read this bl
 
 ## The Problem : How do we store alphabets, symbols in computer ?
 
-We can easily represent a decimal number as a binary and store it in computer. So, What if we map each character(it can be either alphabet or any symbol) to a unique number and store in computer memory?
+We can easily represent a number as a binary and store it in computer. So, What if we map each character(it can be either alphabet or any symbol) to a unique number and store in computer memory?
 
-Well, that's exactly what ASCII is (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange), Introduced in 1963, simplest character encoding standard that maps characters to numbers. It uses 7 bits for each character, so total 128 characters are possible `2 ^ 7 = 128` i.e., values from `0` to `127`
+Well, that's exactly what ASCII is (**A**merican **S**tandard **C**ode for **I**nformation **I**nterchange), Introduced in 1963, simplest character encoding standard that maps characters to numbers. It uses 7 bits for each character, so total 128 characters are possible `2 ^ 7 = 128` i.e., values from 0 to 127
 
 Refer to the [ASCII](https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html) chart.
 
