@@ -4,7 +4,7 @@ description: "Implement jwt auth to APIs - using golang-jwt package"
 date: "April 16 2025"
 ---
 
-## The Problem : How do we add Authorization to our APIs in Go ?
+## How do we add Authorization to our APIs in Go ?
 
 ### Basic Authorization
 

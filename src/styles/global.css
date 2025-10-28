@@ -32,6 +32,7 @@ html {
   background-color: #fff;
   font-family: "Assistant", sans-serif;
   line-height: 1.5;
+  @apply text-[18px];
 }
 
 html.dark {
