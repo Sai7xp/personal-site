@@ -9,7 +9,7 @@ const { entry } = Astro.props;
 ---
 
 <a
-  href={`/${entry.slug}`}
+  href={entry.collection === "blog" ? `/${entry.slug}` : `/${entry.collection}/${entry.slug}`}
   class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border
   border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5
   hover:text-black dark:hover:text-white transition-colors duration-300

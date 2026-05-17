@@ -16,6 +16,117 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <Head title={`${title} | ${SITE.NAME}`} description={description} />
+    <script>
+      function addCopyButtonToPre() {
+        const preElements = document.querySelectorAll("article pre");
+
+        preElements.forEach((pre) => {
+          // Create a wrapper div
+          const wrapper = document.createElement("div");
+          wrapper.className = "code-block-wrapper";
+          wrapper.style.position = "relative";
+          
+          // Insert wrapper before pre
+          pre.parentNode.insertBefore(wrapper, pre);
+          
+          // Move pre into wrapper
+          wrapper.appendChild(pre);
+          
+          // Create a copy button with SVG icon
+          const copyButton = document.createElement("button");
+          copyButton.className = "copy-code-icon";
+          copyButton.type = "button";
+          copyButton.setAttribute("aria-label", "Copy code");
+          
+          // SVG copy icon
+          copyButton.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+            </svg>
+          `;
+          
+          // Fallback copy function using execCommand
+          const fallbackCopy = (text) => {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+              const successful = document.execCommand("copy");
+              document.body.removeChild(textArea);
+              return successful;
+            } catch (err) {
+              document.body.removeChild(textArea);
+              return false;
+            }
+          };
+          
+          // Main copy handler
+          const handleCopy = async (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const codeElement = pre.querySelector("code");
+            if (codeElement) {
+              const text = codeElement.textContent || "";
+              let success = false;
+              
+              // Try modern clipboard API first
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                try {
+                  await navigator.clipboard.writeText(text);
+                  success = true;
+                } catch (err) {
+                  console.error("Clipboard API failed:", err);
+                  // Fallback to execCommand
+                  success = fallbackCopy(text);
+                }
+              } else {
+                // Use fallback for older browsers
+                success = fallbackCopy(text);
+              }
+              
+              if (success) {
+                // Show feedback
+                const originalHTML = copyButton.innerHTML;
+                copyButton.classList.add("copied");
+                copyButton.innerHTML = `
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                `;
+                
+                // Revert after 2 seconds
+                setTimeout(() => {
+                  copyButton.innerHTML = originalHTML;
+                  copyButton.classList.remove("copied");
+                }, 2000);
+              }
+            }
+          };
+          
+          // Multiple event listeners for better mobile support
+          copyButton.addEventListener("click", handleCopy, false);
+          copyButton.addEventListener("touchend", handleCopy, false);
+          copyButton.addEventListener("pointerup", handleCopy, false);
+          
+          // Insert the button into wrapper
+          wrapper.appendChild(copyButton);
+        });
+      }
+
+      // Run when DOM is ready
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", addCopyButtonToPre);
+      } else {
+        addCopyButtonToPre();
+      }
+    </script>
   </head>
   <body>
     <Header />

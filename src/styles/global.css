@@ -146,36 +146,48 @@ article h6 {
   font-weight: 500;
 }
 
-article code,
 article pre {
   max-width: 100%;
   overflow-x: auto;
   position: relative;
+  padding-top: 2.5rem;
 }
 
-/* article pre::after {
-  content: "Copy";
+.code-block-wrapper {
+  position: relative;
+}
+
+.copy-code-icon {
   position: absolute;
   top: 8px;
   right: 8px;
   background: rgba(139, 92, 246, 0.8);
   color: white;
-  padding: 6px 12px;
+  padding: 6px;
   border-radius: 4px;
-  font-size: 12px;
-  font-family: "Atkinson", sans-serif;
   cursor: pointer;
   transition: background 0.3s ease;
   z-index: 10;
   border: 1px solid rgba(139, 92, 246, 0.6);
-} */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+}
 
-article pre:hover::after {
+.copy-code-icon:hover {
   background: rgba(139, 92, 246, 1);
 }
 
-article pre.copied::after {
-  content: "Copied!";
+.copy-code-icon:active {
+  transform: scale(0.95);
+}
+
+.copy-code-icon.copied {
   background: rgba(34, 197, 94, 0.8);
   border-color: rgba(34, 197, 94, 0.6);
 }
