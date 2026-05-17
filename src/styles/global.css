@@ -153,7 +153,7 @@ article pre {
   position: relative;
 }
 
-article pre::after {
+/* article pre::after {
   content: "Copy";
   position: absolute;
   top: 8px;
@@ -168,7 +168,7 @@ article pre::after {
   transition: background 0.3s ease;
   z-index: 10;
   border: 1px solid rgba(139, 92, 246, 0.6);
-}
+} */
 
 article pre:hover::after {
   background: rgba(139, 92, 246, 1);
