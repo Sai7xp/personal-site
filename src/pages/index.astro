@@ -5,35 +5,24 @@ import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import { BLOG } from "@consts";
 
-const data = await getCollection("blog");
+const data = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const validPosts = data
-  .filter((post) => !post.data.draft && post.data.date)
-  .sort(
-    (a, b) =>
-      new Date(b.data.date).valueOf() -
-      new Date(a.data.date).valueOf()
-  );
+type Acc = {
+  [year: string]: CollectionEntry<"blog">[];
+};
 
-type Acc = Record<string, CollectionEntry<"blog">[]>;
-
-const posts = validPosts.reduce((acc: Acc, post) => {
-  const year = new Date(post.data.date)
-    .getFullYear()
-    .toString();
-
+const posts = data.reduce((acc: Acc, post) => {
+  const year = post.data.date.getFullYear().toString();
   if (!acc[year]) {
     acc[year] = [];
   }
-
   acc[year].push(post);
-
   return acc;
 }, {});
 
-const years = Object.keys(posts).sort(
-  (a, b) => parseInt(b) - parseInt(a)
-);
+const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
 ---
 
 <PageLayout title={BLOG.TITLE} description={BLOG.DESCRIPTION}>
