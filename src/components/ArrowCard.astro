@@ -15,11 +15,11 @@ const { entry } = Astro.props;
   hover:text-black dark:hover:text-white transition-colors duration-300
   ease-in-out"
 >
-  <div class="flex flex-col flex-1 truncate">
-    <div class="font-semibold">
+  <div class="flex flex-col flex-1">
+    <div>
       {entry.data.title}
     </div>
-    <div class="text-sm">
+    <div class="text-sm dark:text-white/60">
       {entry.data.description}
     </div>
   </div>
