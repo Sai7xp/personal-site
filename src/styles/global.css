@@ -135,6 +135,15 @@ article {
   line-height: 1.6;
   color: #333;
   overflow-x: hidden;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article p,
+article li,
+article span {
+  font-weight: 400;
 }
 
 article h1,

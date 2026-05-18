@@ -16,11 +16,24 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <Head title={`${title} | ${SITE.NAME}`} description={description} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    
     <script>
       function addCopyButtonToPre() {
         const preElements = document.querySelectorAll("article pre");
 
         preElements.forEach((pre) => {
+          // Skip if already has wrapper
+          if (pre.parentElement?.classList.contains("code-block-wrapper")) {
+            return;
+          }
+
           // Create a wrapper div
           const wrapper = document.createElement("div");
           wrapper.className = "code-block-wrapper";
@@ -123,19 +136,14 @@ const { title, description } = Astro.props;
         });
       }
 
-      // Run when DOM is ready
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", addCopyButtonToPre);
-      } else {
-        addCopyButtonToPre();
-      }
+      // Run on initial page load
+      addCopyButtonToPre();
+
+      // Listen for Astro's client-side navigation events
+      document.addEventListener("astro:page-load", () => {
+        // Small delay to ensure content is in DOM
+        setTimeout(addCopyButtonToPre, 50);
+      });
     </script>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
   </body>
 </html>
